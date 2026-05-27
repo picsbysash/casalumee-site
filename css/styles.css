@@ -1250,40 +1250,52 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   text-align: center;
 }
 
-/* ---------- Company strip (replacing work thumbnails) ---------- */
+/* ---------- Company strip with real client logos ---------- */
 .company-strip {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 36px 56px;
-  padding: 32px 24px;
+  gap: 24px 48px;
+  padding: 36px 28px;
   background: var(--paper-grey);
   border-radius: var(--radius-card);
   margin-top: 24px;
+  min-height: 110px;
 }
 .company-strip-item {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.06em;
-  color: var(--ink);
-  text-transform: uppercase;
-  opacity: 0.75;
-  transition: opacity 200ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 8px;
+  opacity: 0.85;
+  transition: opacity 200ms ease, transform 200ms ease, filter 200ms ease;
+  text-decoration: none;
+  color: inherit;
 }
-.company-strip-item:hover { opacity: 1; }
-.company-strip-item.is-live {
-  color: var(--cherry);
+.company-strip-item:hover,
+.company-strip-item:focus-visible {
   opacity: 1;
+  transform: translateY(-2px);
+  outline: none;
 }
-.company-strip-item.is-soon {
-  font-style: italic;
-  font-weight: 500;
-  opacity: 0.55;
-  text-transform: none;
-  letter-spacing: 0.02em;
+.company-strip-item img {
+  height: 36px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
 }
+.company-strip-item .company-strip-text {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.company-strip-item.is-live .company-strip-text { color: var(--cherry); }
 
 /* ---------- Tier cards (balanced visual treatment, Cherry still primary) ---------- */
 .tiers .tier-card {
