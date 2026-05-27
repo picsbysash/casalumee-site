@@ -101,6 +101,14 @@
     const next = lang === 'es' ? 'es' : 'en';
     root.setAttribute('data-lang', next);
     root.setAttribute('lang', next === 'es' ? 'es' : 'en');
+
+    // Toggle the `hidden` HTML attribute on every lang span.
+    // (The `hidden` attribute is a UA-level display:none that we set in HTML
+    //  for first-paint correctness — but it persists and overrides CSS,
+    //  so we have to flip it explicitly when language changes.)
+    document.querySelectorAll('.lang-en').forEach(el => { el.hidden = (next !== 'en'); });
+    document.querySelectorAll('.lang-es').forEach(el => { el.hidden = (next !== 'es'); });
+
     langButtons.forEach((btn) => {
       const active = btn.dataset.langSet === next;
       btn.classList.toggle('is-active', active);
