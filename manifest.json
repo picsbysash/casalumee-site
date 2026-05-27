@@ -1,0 +1,33 @@
+{
+  "name": "Cherry Content — Creative Growth Studio",
+  "short_name": "Cherry Content",
+  "description": "Photography, social, ads, and websites for Melbourne small businesses. One team, one monthly invoice.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#79011A",
+  "lang": "en-AU",
+  "orientation": "portrait-primary",
+  "categories": ["business", "marketing", "photography"],
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

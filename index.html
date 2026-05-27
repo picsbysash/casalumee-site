@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <!-- Primary meta -->
-  <title>Cherry Content — Marketing for small businesses in Melbourne</title>
-  <meta name="description" content="Photography, social media, Meta ads and websites for Melbourne small businesses — cafes, salons, coaches, trades. One team, one monthly invoice, 6-month minimum." />
-  <meta name="keywords" content="marketing for small business Melbourne, social media management Melbourne, Meta ads agency Melbourne, small business photography Melbourne, content creation for cafes, marketing for cafes salons coaches trades, Cherry Content" />
+  <title>Cherry Content — Intelligent Strategy. Global Impact.</title>
+  <meta name="description" content="Photography, social media, Meta ads and websites for Melbourne small businesses. One team — Sash and Valentina. One monthly invoice. Bilingual EN · ES." />
+  <meta name="keywords" content="marketing for small business Melbourne, social media management Melbourne, Meta ads agency Melbourne, small business photography Melbourne, content creation Melbourne, website design Melbourne, bilingual marketing agency, Cherry Content" />
   <meta name="author" content="Cherry Content" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://cherrycontent.com.au/" />
+  <link rel="alternate" hreflang="en-AU" href="https://cherrycontent.com.au/" />
+  <link rel="alternate" hreflang="es" href="https://cherrycontent.com.au/?lang=es" />
+  <link rel="alternate" hreflang="x-default" href="https://cherrycontent.com.au/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Cherry Content — Marketing for small businesses in Melbourne" />
-  <meta property="og:description" content="We shoot your photos, run your social, build your ads, and make your website convert. One team, one monthly invoice — for Melbourne small businesses." />
+  <meta property="og:title" content="Cherry Content — Intelligent Strategy. Global Impact." />
+  <meta property="og:description" content="Photography, social, ads and websites for Melbourne small businesses. One team. One monthly invoice. Bilingual EN · ES." />
   <meta property="og:url" content="https://cherrycontent.com.au/" />
   <meta property="og:site_name" content="Cherry Content" />
   <meta property="og:image" content="https://cherrycontent.com.au/assets/og-image.jpg" />
   <meta property="og:locale" content="en_AU" />
+  <meta property="og:locale:alternate" content="es_ES" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cherry Content — Marketing for small businesses in Melbourne" />
-  <meta name="twitter:description" content="One team, one monthly invoice. Photography, social, ads and websites for Melbourne small businesses that don't have time to do it themselves." />
+  <meta name="twitter:title" content="Cherry Content — Intelligent Strategy. Global Impact." />
+  <meta name="twitter:description" content="One team. One monthly invoice. Photography, social, ads, and websites for Melbourne small businesses." />
   <meta name="twitter:image" content="https://cherrycontent.com.au/assets/og-image.jpg" />
 
-  <!-- Favicon -->
+  <!-- Favicon + PWA -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#79011A" />
+  <meta name="color-scheme" content="light" />
 
-  <!-- Fonts: Anton (display) + Montserrat (body) -->
+  <!-- Fonts: Montserrat (display + body) per Valentina's brief — only the weights actually used -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -48,23 +55,25 @@
         "@type": "Organization",
         "@id": "https://cherrycontent.com.au/#organization",
         "name": "Cherry Content",
-        "alternateName": "Cherry Content Marketing",
+        "alternateName": "Cherry Content Creative Growth Studio",
         "url": "https://cherrycontent.com.au/",
         "logo": "https://cherrycontent.com.au/assets/logo.png",
-        "description": "Marketing for small businesses in Melbourne. Photography, social media, Meta ads, and websites — handled by one team. Cherry Content is the marketing arm of Pics By Sash, a Melbourne photography studio.",
+        "description": "Creative growth studio for Melbourne small businesses. Photography, social media, Meta ads, and websites — handled by Sash and Valentina. Bilingual English and Spanish.",
         "parentOrganization": {
           "@type": "Organization",
           "name": "Pics By Sash",
           "url": "https://picsbysash.com.au"
         },
-        "slogan": "One team. One invoice. No more freelancer juggle.",
+        "slogan": "Intelligent Strategy. Global Impact.",
         "founder": [
           { "@type": "Person", "name": "Sashank B" },
           { "@type": "Person", "name": "Valentina Torres Charry" }
         ],
         "areaServed": [
           { "@type": "City", "name": "Melbourne" },
-          { "@type": "Country", "name": "Australia" }
+          { "@type": "Country", "name": "Australia" },
+          { "@type": "Country", "name": "Spain" },
+          { "@type": "Country", "name": "Colombia" }
         ],
         "knowsAbout": [
           "Social media management for small business",
@@ -72,8 +81,9 @@
           "Meta Ads for small business",
           "Website design for small business",
           "Local SEO",
+          "Google My Business optimisation",
           "Marketing for cafes, salons, coaches, trades",
-          "AI lead management"
+          "Bilingual marketing (English and Spanish)"
         ],
         "contactPoint": [
           {
@@ -102,7 +112,7 @@
         "url": "https://cherrycontent.com.au/",
         "name": "Cherry Content",
         "publisher": { "@id": "https://cherrycontent.com.au/#organization" },
-        "inLanguage": "en-AU"
+        "inLanguage": ["en-AU", "es"]
       },
       {
         "@type": "LocalBusiness",
@@ -111,24 +121,61 @@
         "image": "https://cherrycontent.com.au/assets/logo.png",
         "url": "https://cherrycontent.com.au/",
         "telephone": "+61417109970",
-        "priceRange": "$$$",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Melbourne",
           "addressRegion": "VIC",
           "addressCountry": "AU"
         }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://cherrycontent.com.au/#ai-lead-management",
-        "serviceType": "AI Lead Management",
-        "provider": { "@id": "https://cherrycontent.com.au/#organization" },
-        "name": "AI-Powered Lead Management",
-        "description": "Optional add-on. When a client is ready to invest in the stack, we set up missed-call text-back, automated replies, and follow-up flows that catch every enquiry across WhatsApp, SMS, email and DMs. Built on GoHighLevel and Claude AI. Tooling cost on top of monthly tier.",
-        "areaServed": "Australia"
       }
     ]
+  }
+  </script>
+
+  <!-- Service catalog (no prices — quote-led per brand strategy) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://cherrycontent.com.au/#service-marketing",
+    "serviceType": "Small business marketing retainer",
+    "name": "Cherry Content — Creative Growth Studio",
+    "provider": { "@id": "https://cherrycontent.com.au/#organization" },
+    "areaServed": [
+      { "@type": "City", "name": "Melbourne" },
+      { "@type": "Country", "name": "Australia" }
+    ],
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Small businesses — cafes, salons, coaches, trades, boutiques, service businesses"
+    },
+    "termsOfService": "6-month minimum, monthly thereafter, 30 days' notice.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cherry Content packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Bloom",
+          "description": "For solo trades, micro-businesses and photography-led brands. Monthly photo + video shoot, polished content delivered, you post when you want. No social management — content drop only."
+        },
+        {
+          "@type": "Offer",
+          "name": "Cherry",
+          "description": "For established cafes, coaches, salons and boutiques that want growth. Monthly shoot, full Instagram and Facebook management, full Meta ads campaign, fortnightly client check-ins. Our most popular package."
+        },
+        {
+          "@type": "Offer",
+          "name": "Orchard",
+          "description": "For SMBs ready to scale paid acquisition. Everything in Cherry, plus a full content production day each month, three platforms, multi-channel ads (Meta + Google), AI-powered audience insights, weekly meetings."
+        },
+        {
+          "@type": "Offer",
+          "name": "Vineyard",
+          "description": "For ambitious SMBs going full-stack. Everything in Orchard, plus a website (build + ongoing maintenance), SEO retainer, Google My Business ranking, AI audience tracking, quarterly conversion optimisation."
+        }
+      ]
+    }
   }
   </script>
 
@@ -143,7 +190,7 @@
         "name": "What does Cherry Content do?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Marketing for small businesses that don't have time to do it themselves. We shoot original photography of your team and space, run your Instagram / Pinterest / TikTok, manage your Meta ads, and build your website. One team, one monthly invoice, 6-month minimum."
+          "text": "Cherry Content is a creative growth studio for Melbourne small businesses. We shoot original photography of your team and space, run your Instagram and Facebook, manage your Meta ads, and build your website. One team — Sash and Valentina. One monthly invoice. 6-month minimum, then monthly. Bilingual in English and Spanish."
         }
       },
       {
@@ -151,7 +198,7 @@
         "name": "Who is Cherry Content for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Melbourne small businesses — cafes, salons, coaches, trades, boutiques, and service businesses. If you're great at your craft but marketing eats your evenings, and you don't want to spend $5k/month on an agency, that's us."
+          "text": "Melbourne small businesses — cafes, salons, coaches, trades, boutiques, and service businesses. Especially if you're great at your craft but marketing eats your evenings, and you don't want to spend five thousand dollars a month on a big agency. We also work with Latin American brands in English and Spanish."
         }
       },
       {
@@ -159,15 +206,15 @@
         "name": "How are you different from a normal marketing agency?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Three things. One: we actually shoot real photography of you, your team and your space — most agencies use stock or AI imagery. Two: one team handles everything, not five freelancers who don't talk to each other — Valentina runs social and content, Sash runs ads and strategy. Three: monthly reports in plain English. We tell you what worked, what didn't, and what we're changing next — no buzzwords."
+          "text": "Three things. One: we shoot real photography of you, your team and your space — most agencies use stock or AI imagery. Two: one team handles everything, not five freelancers who don't talk to each other — Valentina runs social and content, Sash runs ads, strategy and photography. Three: monthly reports in plain English. We tell you what worked, what didn't, and what we're changing next."
         }
       },
       {
         "@type": "Question",
-        "name": "What is AI Lead Management and do I need it?",
+        "name": "How does pricing work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It's an optional add-on for when you're ready to invest in the stack. It catches every enquiry across WhatsApp, SMS, email and DMs, drafts replies that you approve in one tap, and tracks every lead through a CRM. Built on GoHighLevel and Claude AI. There's a tooling cost on top of your monthly tier because the software isn't free — talk to us when you're ready, not before."
+          "text": "We don't publish a price list because every business has different needs. We have four packages — Bloom, Cherry, Orchard, and Vineyard — that scale from photo-only retainer up to full-stack white-label. Book a free 15-minute call and we'll quote you a package that fits where your business actually is."
         }
       },
       {
@@ -175,7 +222,7 @@
         "name": "Where are you based?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Melbourne, Australia. Valentina splits time between Melbourne and Spain (moving full-time to Spain in August 2026), so we cover Australia and Latin America in English and Spanish."
+          "text": "Melbourne, Australia. Valentina splits time between Melbourne and Spain, so we cover Australia and Latin America in English and Spanish."
         }
       },
       {
@@ -183,7 +230,7 @@
         "name": "How do I start?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Book a free 15-minute audit. Send us your Instagram, your Meta ads (if you have any), and your website. We tell you what's working, what's not, and what we'd change first. No deck, no pitch — just a working session."
+          "text": "Book a free 15-minute call. Send us your Instagram, your Meta ads if you have any, and your website. We tell you what's working, what's not, and what we'd change first. No deck, no pitch — just a working session."
         }
       }
     ]
@@ -200,99 +247,6 @@
     ]
   }
   </script>
-
-  <!-- Service + Offer schema for the three tiers (Bloom / Cherry / Orchard) — AEO answer source for "how much does Cherry Content cost?" -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://cherrycontent.com.au/#service-marketing",
-    "serviceType": "Small business marketing retainer",
-    "name": "Cherry Content — Small Business Marketing Retainer",
-    "provider": { "@id": "https://cherrycontent.com.au/#organization" },
-    "areaServed": [
-      { "@type": "City", "name": "Melbourne" },
-      { "@type": "Country", "name": "Australia" }
-    ],
-    "audience": {
-      "@type": "BusinessAudience",
-      "audienceType": "Small businesses — cafes, salons, coaches, trades, boutiques, service businesses"
-    },
-    "termsOfService": "6-month minimum, monthly thereafter, 30 days' notice.",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Cherry Content tiers",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "Bloom",
-          "description": "For solo trades, small cafes and single-location services. Social media management (Instagram + one other), monthly content calendar and scheduling, monthly performance report. We use your existing photos and video — no new shoot included.",
-          "price": "750",
-          "priceCurrency": "AUD",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "750",
-            "priceCurrency": "AUD",
-            "unitText": "MONTH",
-            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
-          },
-          "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
-          "eligibleDuration": { "@type": "QuantitativeValue", "value": 6, "unitCode": "MON" },
-          "addOn": {
-            "@type": "Offer",
-            "name": "Bloom setup fee",
-            "price": "1500",
-            "priceCurrency": "AUD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Cherry",
-          "description": "For established cafes, coaches, salons and boutiques that want growth. Everything in Bloom, plus a half-day photo and video shoot at onboarding, quarterly content refresh shoot, Meta ads management, and a quarterly strategy review with Sash.",
-          "price": "1500",
-          "priceCurrency": "AUD",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "1500",
-            "priceCurrency": "AUD",
-            "unitText": "MONTH",
-            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
-          },
-          "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
-          "eligibleDuration": { "@type": "QuantitativeValue", "value": 6, "unitCode": "MON" },
-          "addOn": {
-            "@type": "Offer",
-            "name": "Cherry setup fee",
-            "price": "3000",
-            "priceCurrency": "AUD"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Orchard",
-          "description": "For premium brands and multi-location small businesses. Everything in Cherry, plus a full-day shoot at onboarding, monthly mini-shoot, website build or rebuild, monthly strategy review, and AI Lead Management setup.",
-          "price": "3000",
-          "priceCurrency": "AUD",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "3000",
-            "priceCurrency": "AUD",
-            "unitText": "MONTH",
-            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
-          },
-          "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
-          "eligibleDuration": { "@type": "QuantitativeValue", "value": 6, "unitCode": "MON" },
-          "addOn": {
-            "@type": "Offer",
-            "name": "Orchard setup fee",
-            "price": "5000",
-            "priceCurrency": "AUD"
-          }
-        }
-      ]
-    }
-  }
-  </script>
 </head>
 <body>
 
@@ -303,20 +257,29 @@
 <header class="nav" role="banner">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Cherry Content home">
-      <img src="assets/logo.png" alt="Cherry Content — marketing for small businesses, Melbourne" width="64" height="64" />
+      <img src="assets/logo-256.png" alt="Cherry Content — creative growth studio, Melbourne" width="64" height="64" fetchpriority="high" decoding="async" />
     </a>
 
     <nav aria-label="Primary">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#services">What we do</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services"><span class="lang-en">What we do</span><span class="lang-es" hidden>Qué hacemos</span></a></li>
+        <li><a href="#packages"><span class="lang-en">Packages</span><span class="lang-es" hidden>Paquetes</span></a></li>
+        <li><a href="#add-ons"><span class="lang-en">Add-ons</span><span class="lang-es" hidden>Servicios</span></a></li>
+        <li><a href="#work"><span class="lang-en">Our work</span><span class="lang-es" hidden>Trabajos</span></a></li>
+        <li><a href="about.html"><span class="lang-en">About</span><span class="lang-es" hidden>Nosotros</span></a></li>
+        <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-es" hidden>Contacto</span></a></li>
       </ul>
     </nav>
 
-    <a href="#contact" class="btn nav-cta">Book a free audit</a>
+    <div class="lang-toggle" role="group" aria-label="Language toggle">
+      <button type="button" data-lang-set="en" class="is-active" aria-pressed="true">EN</button>
+      <button type="button" data-lang-set="es" aria-pressed="false">ES</button>
+    </div>
+
+    <a href="#contact" class="btn nav-cta">
+      <span class="lang-en">Book a call</span>
+      <span class="lang-es" hidden>Agenda una llamada</span>
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -330,14 +293,27 @@
     <span class="hero-shape s2"></span>
   </div>
   <div class="container hero-inner reveal">
-    <p class="eyebrow">Marketing made manageable</p>
-    <h1 id="hero-h">Marketing for small businesses <span class="accent">who don't have time to do it themselves.</span></h1>
+    <p class="eyebrow">
+      <span class="lang-en">Intelligent Strategy · Global Impact</span>
+      <span class="lang-es" hidden>Estrategia inteligente · Impacto global</span>
+    </p>
+    <h1 id="hero-h">
+      <span class="lang-en">All your marketing, <span class="accent">in one place.</span></span>
+      <span class="lang-es" hidden>Todo tu marketing, <span class="accent">en un solo lugar.</span></span>
+    </h1>
     <p class="lead">
-      We shoot your photos, run your social, build your ads, and make your website actually convert. One team. One monthly invoice. None of the "wait, who's posting today?" panic.
+      <span class="lang-en">Photography, social, ads, and websites — handled by Sash and Valentina. One team. One monthly invoice. Built in Melbourne.</span>
+      <span class="lang-es" hidden>Fotografía, redes sociales, ads, y sitios web — de la mano de Sash y Valentina. Un equipo. Una sola factura mensual. Hecho en Melbourne.</span>
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn">Book a free 15-min audit</a>
-      <a href="#pricing" class="btn btn-ghost">See pricing</a>
+      <a href="#contact" class="btn">
+        <span class="lang-en">Book a free 15-min call</span>
+        <span class="lang-es" hidden>Agenda una llamada gratis</span>
+      </a>
+      <a href="#packages" class="btn btn-ghost">
+        <span class="lang-en">See packages</span>
+        <span class="lang-es" hidden>Ver paquetes</span>
+      </a>
     </div>
   </div>
 </section>
@@ -345,10 +321,17 @@
 <!-- ============ VALUE PROPOSITION ============ -->
 <section class="valueprop section-alt reveal">
   <div class="container">
-    <p class="eyebrow green">One team. One invoice.</p>
-    <h2>Stop juggling <span class="accent">5 freelancers.</span></h2>
+    <p class="eyebrow green">
+      <span class="lang-en">One team. One invoice.</span>
+      <span class="lang-es" hidden>Un equipo. Una factura.</span>
+    </p>
+    <h2>
+      <span class="lang-en">Stop juggling <span class="accent">5 freelancers.</span></span>
+      <span class="lang-es" hidden>Deja de hacer malabares con <span class="accent">5 freelancers.</span></span>
+    </h2>
     <p>
-      You've tried it. A photographer for shoots, someone for captions, a designer for the graphics, an ads guy who never returns calls, and the cousin who built your site. None of them talk to each other. We're the team that handles all of it — for a price that makes sense when you're running a small business.
+      <span class="lang-en">You've tried it. A photographer for shoots, someone for captions, a designer for graphics, an ads person who never returns calls, and the cousin who built your site. None of them talk to each other. We're the team that handles all of it — for a price that makes sense when you're running a small business.</span>
+      <span class="lang-es" hidden>Ya lo has intentado. Un fotógrafo para los shoots, alguien para las descripciones, un diseñador para los gráficos, un experto en ads que nunca contesta, y el primo que hizo tu web. Ninguno habla con el otro. Nosotros somos el equipo que hace todo — a un precio que tiene sentido para un negocio pequeño.</span>
     </p>
   </div>
 </section>
@@ -356,18 +339,27 @@
 <!-- ============ SERVICES ============ -->
 <section id="services" aria-labelledby="services-h" class="reveal">
   <div class="container">
-    <p class="eyebrow">What we do</p>
-    <h2 id="services-h">Four things. Done well. Under one roof.</h2>
+    <p class="eyebrow">
+      <span class="lang-en">What we do</span>
+      <span class="lang-es" hidden>Qué hacemos</span>
+    </p>
+    <h2 id="services-h">
+      <span class="lang-en">Three things. Done well. <span class="accent">Under one roof.</span></span>
+      <span class="lang-es" hidden>Tres cosas. Hechas bien. <span class="accent">Bajo un mismo techo.</span></span>
+    </h2>
 
     <div class="services-grid" id="servicesGrid">
 
-      <!-- Service 1 — Featured (Photography + Content centerpiece) -->
+      <!-- Service 1 — Photography + Content (featured) -->
       <article class="service-card featured" data-service="content" tabindex="0" role="button" aria-pressed="true" aria-controls="detail-content">
         <span class="service-icon" aria-hidden="true">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
         </span>
-        <h3>Photography + Content</h3>
-        <p>Real photos of you, your team, your space, your customers. Plus we run your Instagram, Pinterest and TikTok off the back of every shoot. The part most agencies skip — and the part that actually sells you.</p>
+        <h3><span class="lang-en">Photography + Content</span><span class="lang-es" hidden>Fotografía + Contenido</span></h3>
+        <p>
+          <span class="lang-en">Real photos of you, your team, your space. Then Valentina runs your Instagram, Facebook and TikTok off the back of every shoot. The part most agencies skip — and the part that actually sells you.</span>
+          <span class="lang-es" hidden>Fotos reales de ti, tu equipo, tu espacio. Después Valentina lleva tu Instagram, Facebook y TikTok con cada shoot. La parte que la mayoría de agencias se salta — y la que realmente vende.</span>
+        </p>
       </article>
 
       <!-- Service 2 -->
@@ -375,8 +367,11 @@
         <span class="service-icon" aria-hidden="true">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 6-6"/></svg>
         </span>
-        <h3>Meta Ads That Pay For Themselves</h3>
-        <p>Facebook and Instagram ads run on the same dashboard we use for our own business. Real targeting, plain-English monthly reports — what worked, what didn't, what we're changing next.</p>
+        <h3><span class="lang-en">Meta Ads That Pay For Themselves</span><span class="lang-es" hidden>Ads de Meta que se pagan solos</span></h3>
+        <p>
+          <span class="lang-en">Facebook and Instagram ads run on the same dashboard we use for our own business. Real targeting, plain-English monthly reports — what worked, what didn't, what we're changing next.</span>
+          <span class="lang-es" hidden>Campañas en Facebook e Instagram con el mismo dashboard que usamos para nuestro propio negocio. Segmentación real, reportes mensuales en lenguaje simple — qué funcionó, qué no, qué vamos a cambiar.</span>
+        </p>
       </article>
 
       <!-- Service 3 -->
@@ -384,17 +379,11 @@
         <span class="service-icon" aria-hidden="true">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
         </span>
-        <h3>Websites + SEO</h3>
-        <p>Sites that load fast, look like you, and rank for what your customers actually search. Plus Google Business Profile and local SEO. No buzzwords — a site that sells.</p>
-      </article>
-
-      <!-- Service 4 — AI Lead Management (optional add-on, demoted from featured) -->
-      <article class="service-card" data-service="ai" tabindex="0" role="button" aria-pressed="false" aria-controls="detail-ai">
-        <span class="service-icon" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="5"/></svg>
-        </span>
-        <h3>AI Lead Management <em style="font-style:normal;font-weight:500;opacity:.7">(optional)</em></h3>
-        <p>For when you're ready to invest in the stack. We wire up missed-call text-back, automated replies, and a CRM that catches every enquiry across WhatsApp, SMS, email and DMs. Talk to us when you're ready, not before.</p>
+        <h3><span class="lang-en">Websites + SEO</span><span class="lang-es" hidden>Sitios web + SEO</span></h3>
+        <p>
+          <span class="lang-en">Sites that load fast, look like you, and rank for what your customers actually search. Plus Google Business Profile and local SEO. No buzzwords — a site that sells.</span>
+          <span class="lang-es" hidden>Sitios rápidos, que se ven como tú, y que rankean para lo que tus clientes realmente buscan. Más perfil de Google Business y SEO local. Sin tecnicismos — un sitio que vende.</span>
+        </p>
       </article>
 
     </div>
@@ -403,14 +392,20 @@
 
     <!-- Photography + Content — default open (centerpiece) -->
     <div class="service-detail is-open" id="detail-content" data-detail="content" aria-live="polite">
-      <p class="eyebrow">Our centerpiece</p>
-      <h3>Photography + Content</h3>
-      <p>Here's the thing: AI can do product shots. AI can churn out a logo. AI cannot stand behind your counter and catch you laughing with a regular at 8am. That's the content that actually sells you — and that's what we make. We do the shoot, we edit, we cut the video. Valentina runs your IG, Pinterest and TikTok off the back of it. You stay in front of the camera, not buried in the laptop.</p>
+      <p class="eyebrow">
+        <span class="lang-en">Our centerpiece</span>
+        <span class="lang-es" hidden>Nuestro pilar</span>
+      </p>
+      <h3><span class="lang-en">Photography + Content</span><span class="lang-es" hidden>Fotografía + Contenido</span></h3>
+      <p>
+        <span class="lang-en">Here's the thing: AI can do product shots. AI can churn out a logo. AI cannot stand behind your counter and catch you laughing with a regular at 8am. That's the content that actually sells you — and that's what we make. Sash does the shoot, we edit, we cut the video. Valentina runs your social channels off the back of it. You stay in front of the camera, not buried in the laptop.</span>
+        <span class="lang-es" hidden>El truco es este: la IA puede hacer fotos de producto. La IA puede generar un logo. Pero la IA no puede pararse detrás de tu mostrador y captarte riéndote con un cliente habitual a las 8 de la mañana. Ese es el contenido que de verdad te vende — y eso es lo que hacemos. Sash hace el shoot, editamos, cortamos el video. Valentina lleva tus redes con todo eso. Tú estás frente a la cámara, no enterrado en el laptop.</span>
+      </p>
       <div class="detail-tags">
         <span class="detail-tag">Real human photography</span>
         <span class="detail-tag">Video reels</span>
         <span class="detail-tag">Instagram management</span>
-        <span class="detail-tag">Pinterest &amp; TikTok</span>
+        <span class="detail-tag">Facebook &amp; TikTok</span>
         <span class="detail-tag">Captions &amp; scheduling</span>
         <span class="detail-tag">Monthly content calendar</span>
         <span class="detail-tag">Quarterly refresh shoot</span>
@@ -423,10 +418,19 @@
           <div class="img-slot">Customer story</div>
         </div>
         <div>
-          <p>If your business is product-only — packshots, ecommerce flatlays — we'll be straight: AI tools can do most of that cheaper than us, and we'll tell you so on the audit call. We earn our keep where the camera needs to be in the room with real people.</p>
+          <p>
+            <span class="lang-en">If your business is product-only — packshots, ecommerce flatlays — we'll be straight: AI tools can do most of that cheaper than us, and we'll tell you so on the call. We earn our keep where the camera needs to be in the room with real people.</span>
+            <span class="lang-es" hidden>Si tu negocio es solo producto — packshots, flatlays ecommerce — te lo decimos directo: la IA puede hacer la mayoría de eso más barato que nosotros, y te lo diremos en la llamada. Nosotros ganamos donde la cámara tiene que estar en la sala con gente real.</span>
+          </p>
           <div class="detail-actions">
-            <a href="https://picsbysash.com.au" class="btn" target="_blank" rel="noopener">See the photography portfolio →</a>
-            <a href="#contact" class="btn btn-ghost">Book a free audit</a>
+            <a href="https://picsbysash.com.au" class="btn" target="_blank" rel="noopener">
+              <span class="lang-en">See the photography portfolio →</span>
+              <span class="lang-es" hidden>Ver portafolio de fotografía →</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <span class="lang-en">Book a free call</span>
+              <span class="lang-es" hidden>Agenda una llamada</span>
+            </a>
           </div>
         </div>
       </div>
@@ -435,10 +439,13 @@
     <!-- Ads -->
     <div class="service-detail" id="detail-ads" data-detail="ads" aria-live="polite">
       <p class="eyebrow green">02 · Ads</p>
-      <h3>Meta Ads That Pay For Themselves</h3>
-      <p>We run your Facebook and Instagram ads on the same dashboard we use for Pics By Sash. Real targeting, real numbers, a monthly report you can actually read — what worked, what didn't, and what we're changing next month.</p>
+      <h3><span class="lang-en">Meta Ads That Pay For Themselves</span><span class="lang-es" hidden>Ads que se pagan solos</span></h3>
+      <p>
+        <span class="lang-en">Sash runs your Facebook and Instagram ads on the same dashboard he uses for Pics By Sash. Real targeting, real numbers, a monthly report you can actually read — what worked, what didn't, and what we're changing next month.</span>
+        <span class="lang-es" hidden>Sash maneja tus ads de Facebook e Instagram con el mismo dashboard que usa para Pics By Sash. Segmentación real, números reales, un reporte mensual que puedes entender — qué funcionó, qué no, y qué cambiamos el mes que viene.</span>
+      </p>
       <div class="detail-grid">
-        <div class="dash-mock" aria-label="Sample weekly performance report">
+        <div class="dash-mock" aria-label="Sample monthly performance report">
           <div class="dash-stats">
             <div class="dash-stat">
               <span class="dash-stat-label">Ad spend</span>
@@ -496,9 +503,15 @@
           <p style="font-size:.8rem;color:var(--ink-3);margin-top:14px;">↑ Trend after creative refresh, week 3.</p>
         </div>
         <div>
-          <p>Sample monthly report — the metrics that matter, plus what we'd test next month. No spreadsheets you have to decode.</p>
+          <p>
+            <span class="lang-en">Sample monthly report — the metrics that matter, plus what we'd test next month. No spreadsheets you have to decode.</span>
+            <span class="lang-es" hidden>Reporte mensual de muestra — las métricas que importan, más qué probaríamos el próximo mes. Sin hojas de cálculo que tengas que descifrar.</span>
+          </p>
           <div class="detail-actions">
-            <a href="#contact" class="btn">See a sample report →</a>
+            <a href="#contact" class="btn">
+              <span class="lang-en">See a sample report →</span>
+              <span class="lang-es" hidden>Ver un reporte de muestra →</span>
+            </a>
           </div>
         </div>
       </div>
@@ -507,8 +520,11 @@
     <!-- Digital -->
     <div class="service-detail" id="detail-digital" data-detail="digital" aria-live="polite">
       <p class="eyebrow green">03 · Web</p>
-      <h3>Websites + SEO</h3>
-      <p>We build sites that load fast, look like you, and rank for what your customers actually search. Plus Google Business Profile, on-page SEO and local schema so people find you in the first place. No "Content Architecture." Just a site that sells.</p>
+      <h3><span class="lang-en">Websites + SEO</span><span class="lang-es" hidden>Sitios web + SEO</span></h3>
+      <p>
+        <span class="lang-en">We build sites that load fast, look like you, and rank for what your customers actually search. Plus Google Business Profile, on-page SEO and local schema so people find you in the first place. Just a site that sells.</span>
+        <span class="lang-es" hidden>Construimos sitios rápidos, que se ven como tú, y que rankean para lo que tus clientes realmente buscan. Más perfil de Google Business, SEO en página, y schema local para que la gente te encuentre. Un sitio que vende.</span>
+      </p>
       <div class="detail-tags">
         <span class="detail-tag">Domain &amp; hosting</span>
         <span class="detail-tag">Mobile-first</span>
@@ -522,212 +538,295 @@
         <div class="img-slot" style="aspect-ratio: 16/10;">Google Business Profile · 4.9 ★</div>
       </div>
       <div class="detail-actions">
-        <a href="#contact" class="btn">Get a quote</a>
-      </div>
-    </div>
-
-    <!-- AI Lead Management — moved to last, no longer default-open -->
-    <div class="service-detail" id="detail-ai" data-detail="ai" aria-live="polite">
-      <p class="eyebrow green">04 · Optional add-on</p>
-      <h3>AI Lead Management (when you're ready)</h3>
-      <p>When you're ready to invest in the stack, we'll wire up missed-call text-back, automated replies, follow-up sequences, and a CRM that catches every enquiry — across WhatsApp, SMS, email and DMs. Built on GoHighLevel and Claude AI. We set it up, we run it. There's a tooling cost on top of your monthly tier because the software isn't free — talk to us when you want it on.</p>
-      <div class="detail-tags">
-        <span class="detail-tag">Dedicated business number</span>
-        <span class="detail-tag">WhatsApp · SMS · Email · DMs</span>
-        <span class="detail-tag">You approve every reply</span>
-        <span class="detail-tag">Full conversation log</span>
-        <span class="detail-tag">Pipeline tracking</span>
-      </div>
-      <div class="detail-grid">
-        <div class="phone-mock" aria-label="WhatsApp draft and approval workflow">
-          <div class="phone-screen">
-            <div class="bubble them">Hi, are you available for a shoot in late June?</div>
-            <div class="bubble ai">Hi Priya — yes, we have availability in late June. Would you prefer a weekday or weekend slot? I can share package options once you confirm.</div>
-            <div class="bubble approve">Tap to Approve · Edit · Skip</div>
-            <div class="bubble them">Weekend would be perfect.</div>
-            <div class="bubble ai">Locking in. I'll send a calendar invite and the package details within the next 10 minutes.</div>
-          </div>
-        </div>
-        <div>
-          <div class="pipe" aria-label="CRM pipeline preview">
-            <div class="pipe-col">
-              <h5>New</h5>
-              <div class="pipe-card">P. Singh · WA</div>
-              <div class="pipe-card">A. Costa · IG</div>
-            </div>
-            <div class="pipe-col">
-              <h5>Replied</h5>
-              <div class="pipe-card">M. Nguyen · SMS</div>
-            </div>
-            <div class="pipe-col">
-              <h5>Booked</h5>
-              <div class="pipe-card">L. Ortiz · Email</div>
-              <div class="pipe-card">J. Patel · WA</div>
-            </div>
-            <div class="pipe-col">
-              <h5>Done</h5>
-              <div class="pipe-card">S. Khan · WA</div>
-            </div>
-          </div>
-          <div class="detail-actions">
-            <a href="#contact" class="btn">Ask about the AI add-on</a>
-            <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
-          </div>
-          <p style="font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-top:18px;">Powered by GoHighLevel &middot; Claude AI</p>
-        </div>
+        <a href="#contact" class="btn">
+          <span class="lang-en">Get a quote</span>
+          <span class="lang-es" hidden>Pide cotización</span>
+        </a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ============ HOW THE AI LEAD SYSTEM WORKS (optional add-on) ============ -->
-<section class="section-alt reveal" id="how-it-works" aria-labelledby="how-h">
+<!-- ============ JOURNEY (3-COL) ============ -->
+<section class="reveal section-alt" aria-labelledby="journey-h">
   <div class="container">
-    <p class="eyebrow">If you turn on the AI add-on</p>
-    <h2 id="how-h">Three steps. <span style="color:var(--cherry)">No lead lost.</span></h2>
-    <div class="steps">
-      <div class="step">
-        <span class="step-num">1</span>
-        <div>
-          <h3>The lead arrives</h3>
-          <p>Someone messages your WhatsApp, clicks your Meta ad, DMs your Instagram, or texts your business number. The system catches it in seconds and opens a record.</p>
-        </div>
-      </div>
-      <div class="step">
-        <span class="step-num">2</span>
-        <div>
-          <h3>It drafts. You approve.</h3>
-          <p>A reply is drafted with full context, pinged to your WhatsApp. One tap to approve, edit, or skip. You stay in control — the AI just saves you the typing.</p>
-        </div>
-      </div>
-      <div class="step">
-        <span class="step-num">3</span>
-        <div>
-          <h3>Tracked end-to-end</h3>
-          <p>Every message, email and follow-up is logged against the customer and moves through your pipeline — from first contact to booked-and-done. Nothing slips.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ JOURNEY (3-COL) — How working together looks ============ -->
-<section class="reveal" aria-labelledby="journey-h">
-  <div class="container">
-    <p class="eyebrow green">How working together looks</p>
-    <h2 id="journey-h">Free audit. Onboarding shoot. <span style="color:var(--cherry)">We run it.</span></h2>
+    <p class="eyebrow green">
+      <span class="lang-en">How working together looks</span>
+      <span class="lang-es" hidden>Cómo trabajamos juntos</span>
+    </p>
+    <h2 id="journey-h">
+      <span class="lang-en">Free call. Regular shoots. <span style="color:var(--cherry)">We run it.</span></span>
+      <span class="lang-es" hidden>Llamada gratis. Shoots regulares. <span style="color:var(--cherry)">Nosotros lo manejamos.</span></span>
+    </h2>
     <div class="cols-3">
       <article class="col-card">
         <span class="num">01</span>
-        <h3>Free 15-min audit</h3>
-        <p>Send us your Instagram, your Meta ads (if you have any), and your website. We'll tell you what's working, what's not, and what we'd change first. No deck. No pitch.</p>
+        <h3><span class="lang-en">Free 15-min call</span><span class="lang-es" hidden>Llamada gratis de 15 min</span></h3>
+        <p>
+          <span class="lang-en">Send us your Instagram, your Meta ads (if you have any), and your website. We'll tell you what's working, what's not, and what we'd change first. No deck. No pitch.</span>
+          <span class="lang-es" hidden>Mándanos tu Instagram, tus ads de Meta (si los tienes), y tu sitio web. Te decimos qué funciona, qué no, y qué cambiaríamos primero. Sin presentación. Sin pitch.</span>
+        </p>
       </article>
       <article class="col-card">
         <span class="num">02</span>
-        <h3>Onboarding shoot</h3>
-        <p>We come to you. Photos of the real thing — your team, your space, your customers. Video too. Then we plug it into your social channels and your ads.</p>
+        <h3><span class="lang-en">Regular shoots</span><span class="lang-es" hidden>Shoots regulares</span></h3>
+        <p>
+          <span class="lang-en">Sash comes to you each month. Photos and video of the real thing — your team, your space, your customers. Valentina builds the content calendar and the ads off the back of it.</span>
+          <span class="lang-es" hidden>Sash viene a verte cada mes. Fotos y video de la realidad — tu equipo, tu espacio, tus clientes. Valentina arma el calendario de contenido y los ads con todo eso.</span>
+        </p>
       </article>
       <article class="col-card">
         <span class="num">03</span>
-        <h3>We run it</h3>
-        <p>Monthly dashboard lands in your inbox. We jump on a call quarterly (Cherry) or monthly (Orchard). You stay in front of customers, not buried in marketing tools.</p>
+        <h3><span class="lang-en">We run it</span><span class="lang-es" hidden>Nosotros lo llevamos</span></h3>
+        <p>
+          <span class="lang-en">Monthly dashboard lands in your inbox. We jump on a call fortnightly (Cherry) or weekly (Orchard / Vineyard). You stay in front of customers, not buried in marketing tools.</span>
+          <span class="lang-es" hidden>Dashboard mensual en tu inbox. Hablamos cada dos semanas (Cherry) o cada semana (Orchard / Vineyard). Tú al frente de tus clientes, no enterrado en herramientas de marketing.</span>
+        </p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ PRICING ============ -->
-<section id="pricing" class="section-alt reveal" aria-labelledby="pricing-h">
+<!-- ============ PACKAGES ============ -->
+<section id="packages" class="reveal" aria-labelledby="packages-h">
   <div class="container">
-    <p class="eyebrow">Three tiers</p>
-    <h2 id="pricing-h">Pick the one that fits <span style="color:var(--cherry)">where your business is</span></h2>
-    <p style="max-width:720px;margin-bottom:12px;">Book a meet to get a tailored package that suits your business and goals.</p>
-    <p style="max-width:720px;margin-bottom:32px;">All tiers: 6-month minimum, then monthly with 30 days' notice. No surprise fees, no lock-ins past 6 months.</p>
+    <p class="eyebrow">
+      <span class="lang-en">Four packages</span>
+      <span class="lang-es" hidden>Cuatro paquetes</span>
+    </p>
+    <h2 id="packages-h">
+      <span class="lang-en">Pick the package that fits <span style="color:var(--cherry)">where your business is.</span></span>
+      <span class="lang-es" hidden>Elige el paquete que se ajusta a <span style="color:var(--cherry)">tu negocio.</span></span>
+    </h2>
+    <p style="max-width:760px;margin-bottom:12px;">
+      <span class="lang-en">No price list here — every business is different. Book a call and we'll quote you a package that actually fits.</span>
+      <span class="lang-es" hidden>Aquí no hay lista de precios — cada negocio es distinto. Agenda una llamada y te cotizamos un paquete que realmente te sirva.</span>
+    </p>
+    <p style="max-width:760px;margin-bottom:32px;font-size:0.92rem;color:var(--ink-3);">
+      <span class="lang-en">All packages: 6-month minimum, then monthly with 30 days' notice. No surprise fees, no lock-ins past 6 months.</span>
+      <span class="lang-es" hidden>Todos los paquetes: 6 meses mínimo, después mensual con 30 días de aviso. Sin sorpresas, sin contratos atados después de 6 meses.</span>
+    </p>
 
-    <div class="cols-3">
+    <div class="cols-4">
+      <!-- Bloom -->
       <article class="col-card">
         <span class="num" style="color:var(--cherry-soft);">Bloom</span>
-        <p><strong>For:</strong> solo trades, small cafes, single-location services.</p>
-        <ul style="margin:14px 0 0 18px;padding:0;font-size:.95rem;">
-          <li>Social media management (IG + one other)</li>
-          <li>Monthly content calendar &amp; scheduling</li>
-          <li>Monthly performance report</li>
-          <li>We use your existing photos &amp; video</li>
+        <p><strong><span class="lang-en">For:</span><span class="lang-es" hidden>Para:</span></strong>
+          <span class="lang-en">solo trades, micro-businesses, photography-led brands.</span>
+          <span class="lang-es" hidden>autónomos, micro-negocios, marcas que viven de la imagen.</span>
+        </p>
+        <ul style="margin:14px 0 0 18px;padding:0;font-size:.92rem;">
+          <li><span class="lang-en">Monthly 2-hour photo + video shoot</span><span class="lang-es" hidden>Shoot mensual de 2 horas (foto + video)</span></li>
+          <li><span class="lang-en">~12 polished images + 4 reels-ready clips</span><span class="lang-es" hidden>~12 imágenes editadas + 4 clips listos para reels</span></li>
+          <li><span class="lang-en">Caption drafts ready to copy-paste</span><span class="lang-es" hidden>Borradores de captions listos para usar</span></li>
+          <li><span class="lang-en">Monthly performance snapshot</span><span class="lang-es" hidden>Reporte mensual de rendimiento</span></li>
+          <li><span class="lang-en">You post when you want</span><span class="lang-es" hidden>Tú publicas cuando quieras</span></li>
         </ul>
-        <p style="font-size:.88rem;color:var(--ink-3);margin-top:14px;">No new shoot. If you've got a decent library, we make it work harder.</p>
+        <p style="font-size:.85rem;color:var(--ink-3);margin-top:14px;">
+          <span class="lang-en">Photography-led starter. No social management — content drop only.</span>
+          <span class="lang-es" hidden>Plan de entrada, enfocado en foto. Sin manejo de redes — solo entrega de contenido.</span>
+        </p>
       </article>
 
-      <article class="col-card" style="border-color:var(--cherry);box-shadow:0 8px 32px rgba(220,38,80,.12);">
+      <!-- Cherry (most popular) -->
+      <article class="col-card" style="border-color:var(--cherry);box-shadow:0 8px 32px rgba(121,1,26,.14);">
         <span class="num" style="color:var(--cherry);">Cherry</span>
-        <p style="font-size:.85rem;color:var(--ink-3);margin-top:-6px;"><strong style="color:var(--cherry);">most pick this</strong></p>
-        <p><strong>For:</strong> established cafes, coaches, salons, boutiques that want growth.</p>
-        <ul style="margin:14px 0 0 18px;padding:0;font-size:.95rem;">
-          <li>Everything in Bloom</li>
-          <li>Half-day photo + video shoot at onboarding</li>
-          <li>Quarterly content refresh shoot</li>
-          <li>Meta ads management</li>
-          <li>Quarterly strategy review with Sash</li>
+        <p style="font-size:.8rem;color:var(--cherry);margin-top:-6px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">
+          <span class="lang-en">★ Most pick this</span>
+          <span class="lang-es" hidden>★ El más elegido</span>
+        </p>
+        <p><strong><span class="lang-en">For:</span><span class="lang-es" hidden>Para:</span></strong>
+          <span class="lang-en">established cafes, coaches, salons, boutiques that want growth.</span>
+          <span class="lang-es" hidden>cafés, coaches, salones y boutiques que quieren crecer.</span>
+        </p>
+        <ul style="margin:14px 0 0 18px;padding:0;font-size:.92rem;">
+          <li><span class="lang-en">Monthly 2-hour shoot</span><span class="lang-es" hidden>Shoot mensual de 2 horas</span></li>
+          <li><span class="lang-en">~16 posts + 4 reels per month</span><span class="lang-es" hidden>~16 posts + 4 reels al mes</span></li>
+          <li><span class="lang-en">Instagram + Facebook full management (Valentina)</span><span class="lang-es" hidden>Manejo total de IG + Facebook (Valentina)</span></li>
+          <li><span class="lang-en">Full Meta ads campaign (Sash)</span><span class="lang-es" hidden>Campaña completa de Meta ads (Sash)</span></li>
+          <li><span class="lang-en">Fortnightly client meetings</span><span class="lang-es" hidden>Reuniones cada 2 semanas</span></li>
+          <li><span class="lang-en">Monthly performance report</span><span class="lang-es" hidden>Reporte mensual de rendimiento</span></li>
         </ul>
       </article>
 
+      <!-- Orchard -->
       <article class="col-card">
         <span class="num" style="color:var(--cherry-soft);">Orchard</span>
-        <p><strong>For:</strong> premium brands and multi-location businesses.</p>
-        <ul style="margin:14px 0 0 18px;padding:0;font-size:.95rem;">
-          <li>Everything in Cherry</li>
-          <li>Full-day shoot at onboarding</li>
-          <li>Monthly mini-shoot</li>
-          <li>Website build or rebuild</li>
-          <li>Monthly strategy review</li>
-          <li>AI Lead Management setup</li>
+        <p><strong><span class="lang-en">For:</span><span class="lang-es" hidden>Para:</span></strong>
+          <span class="lang-en">SMBs ready to scale paid acquisition.</span>
+          <span class="lang-es" hidden>PYMES listas para acelerar adquisición pagada.</span>
+        </p>
+        <ul style="margin:14px 0 0 18px;padding:0;font-size:.92rem;">
+          <li><span class="lang-en">Everything in Cherry</span><span class="lang-es" hidden>Todo lo de Cherry</span></li>
+          <li><span class="lang-en">Monthly 4-hour shoot (full content day)</span><span class="lang-es" hidden>Shoot mensual de 4 horas (día completo)</span></li>
+          <li><span class="lang-en">~24 posts + 6 reels per month</span><span class="lang-es" hidden>~24 posts + 6 reels al mes</span></li>
+          <li><span class="lang-en">3 platforms (add TikTok / Pinterest / LinkedIn)</span><span class="lang-es" hidden>3 plataformas (suma TikTok / Pinterest / LinkedIn)</span></li>
+          <li><span class="lang-en">Multi-channel ads (Meta + Google)</span><span class="lang-es" hidden>Ads multi-canal (Meta + Google)</span></li>
+          <li><span class="lang-en">AI-powered audience insights</span><span class="lang-es" hidden>Insights de audiencia con IA</span></li>
+          <li><span class="lang-en">Weekly client meetings</span><span class="lang-es" hidden>Reuniones semanales</span></li>
+          <li><span class="lang-en">Brand consistency review quarterly</span><span class="lang-es" hidden>Revisión de marca trimestral</span></li>
+        </ul>
+      </article>
+
+      <!-- Vineyard -->
+      <article class="col-card" style="border-color:var(--forest);">
+        <span class="num" style="color:var(--forest);">Vineyard</span>
+        <p style="font-size:.8rem;color:var(--forest);margin-top:-6px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">
+          <span class="lang-en">Full-stack</span>
+          <span class="lang-es" hidden>Todo en uno</span>
+        </p>
+        <p><strong><span class="lang-en">For:</span><span class="lang-es" hidden>Para:</span></strong>
+          <span class="lang-en">ambitious SMBs going full-stack — search + social + paid + website.</span>
+          <span class="lang-es" hidden>negocios ambiciosos que quieren todo — búsqueda + redes + ads + web.</span>
+        </p>
+        <ul style="margin:14px 0 0 18px;padding:0;font-size:.92rem;">
+          <li><span class="lang-en">Everything in Orchard</span><span class="lang-es" hidden>Todo lo de Orchard</span></li>
+          <li><span class="lang-en">Website build + ongoing maintenance</span><span class="lang-es" hidden>Sitio web + mantenimiento</span></li>
+          <li><span class="lang-en">SEO foundation + monthly growth retainer</span><span class="lang-es" hidden>SEO de base + retainer mensual de crecimiento</span></li>
+          <li><span class="lang-en">Google My Business ranking</span><span class="lang-es" hidden>Posicionamiento en Google My Business</span></li>
+          <li><span class="lang-en">AI audience tracking + behavioural insights</span><span class="lang-es" hidden>Tracking de audiencia con IA + insights de comportamiento</span></li>
+          <li><span class="lang-en">Quarterly conversion-rate optimisation</span><span class="lang-es" hidden>Optimización trimestral de conversión</span></li>
+          <li><span class="lang-en">4 platforms · Daily content cadence</span><span class="lang-es" hidden>4 plataformas · Contenido diario</span></li>
+          <li><span class="lang-en">Weekly meetings + monthly strategy call</span><span class="lang-es" hidden>Reuniones semanales + estrategia mensual</span></li>
         </ul>
       </article>
     </div>
 
     <div style="margin-top:36px;text-align:center;">
-      <a href="#contact" class="btn">Book a free 15-min audit</a>
+      <a href="#contact" class="btn">
+        <span class="lang-en">Book a free 15-min call</span>
+        <span class="lang-es" hidden>Agenda una llamada gratis</span>
+      </a>
+      <p style="margin-top:18px;font-size:0.9rem;color:var(--ink-3);">
+        <span class="lang-en">Want something different? Build your own stack below.</span>
+        <span class="lang-es" hidden>¿Quieres algo distinto? Arma tu propio paquete abajo.</span>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ============ WORK ============ -->
+<!-- ============ A-LA-CARTE ADD-ONS ============ -->
+<section id="add-ons" class="section-alt reveal" aria-labelledby="addons-h">
+  <div class="container">
+    <p class="eyebrow green">
+      <span class="lang-en">A-la-carte</span>
+      <span class="lang-es" hidden>A la carta</span>
+    </p>
+    <h2 id="addons-h">
+      <span class="lang-en">Build your stack. <span style="color:var(--cherry)">Pick what you need.</span></span>
+      <span class="lang-es" hidden>Arma tu paquete. <span style="color:var(--cherry)">Elige lo que necesites.</span></span>
+    </h2>
+    <p style="max-width:760px;margin-bottom:8px;">
+      <span class="lang-en">Already on a package? Add these as needed. Not sure which package fits? Tick the ones you want and we'll quote you a tailored bundle.</span>
+      <span class="lang-es" hidden>¿Ya tienes un paquete? Agrega lo que te haga falta. ¿No sabes cuál te conviene? Marca lo que quieras y te cotizamos un bundle a medida.</span>
+    </p>
+
+    <div class="addons-grid" id="addonsGrid" role="group" aria-label="A-la-carte add-ons">
+
+      <button type="button" class="addon-card" data-addon="brand-identity" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Brand identity + brand book</span><span class="lang-es" hidden>Identidad de marca + manual</span></h3>
+        <p><span class="lang-en">Logo, palette, typography, brand book. Built by Valentina.</span><span class="lang-es" hidden>Logo, paleta, tipografía, manual. Hecho por Valentina.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="website-build" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Website build</span><span class="lang-es" hidden>Construcción de sitio web</span></h3>
+        <p><span class="lang-en">Fast, modern HTML site on Netlify. Up to 5 pages. SEO foundation included.</span><span class="lang-es" hidden>Sitio HTML rápido y moderno en Netlify. Hasta 5 páginas. Base de SEO incluida.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="seo-foundation" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">SEO foundation (one-time)</span><span class="lang-es" hidden>Base de SEO (única vez)</span></h3>
+        <p><span class="lang-en">Keyword research, schema markup, on-page tags, sitemap, Search Console + GA4.</span><span class="lang-es" hidden>Investigación de keywords, schema, meta tags, sitemap, Search Console + GA4.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="seo-growth" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">SEO growth (monthly)</span><span class="lang-es" hidden>Crecimiento SEO (mensual)</span></h3>
+        <p><span class="lang-en">Rank tracking, on-page tweaks, content optimisation, monthly report.</span><span class="lang-es" hidden>Tracking de ranking, ajustes en página, optimización de contenido, reporte mensual.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="gmb" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Google My Business ranking</span><span class="lang-es" hidden>Ranking en Google My Business</span></h3>
+        <p><span class="lang-en">Profile build, local keyword targeting, review flow setup.</span><span class="lang-es" hidden>Perfil completo, palabras clave locales, flujo de reseñas.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="cro" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Conversion optimisation sprint</span><span class="lang-es" hidden>Sprint de optimización de conversión</span></h3>
+        <p><span class="lang-en">Heatmaps, A/B testing, landing page tweaks. 5-phase delivery.</span><span class="lang-es" hidden>Heatmaps, tests A/B, ajustes a landing. Entrega en 5 fases.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="ai-tracking" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">AI audience intelligence</span><span class="lang-es" hidden>Inteligencia de audiencia con IA</span></h3>
+        <p><span class="lang-en">Cross-platform tracking, behaviour signals, booking-intent prediction.</span><span class="lang-es" hidden>Tracking entre plataformas, señales de comportamiento, predicción de intención.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="crm-portal" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Branded client CRM portal</span><span class="lang-es" hidden>Portal CRM con tu marca</span></h3>
+        <p><span class="lang-en">See every lead in real time. SMS, email, WhatsApp nurture. Booking calendar.</span><span class="lang-es" hidden>Mira cada lead en tiempo real. SMS, email, WhatsApp. Calendario de reservas.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="brand-video" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Brand video production</span><span class="lang-es" hidden>Producción de video de marca</span></h3>
+        <p><span class="lang-en">Full-day shoot, hero video for brand or campaign. Edited.</span><span class="lang-es" hidden>Shoot de día completo, video hero para marca o campaña. Editado.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="ads-training" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Paid Ads training (4 sessions)</span><span class="lang-es" hidden>Capacitación en ads (4 sesiones)</span></h3>
+        <p><span class="lang-en">Sash teaches your team to run ads in-house. Anti-churn lever.</span><span class="lang-es" hidden>Sash le enseña a tu equipo a manejar ads. Para que sean autosuficientes.</span></p>
+      </button>
+
+      <button type="button" class="addon-card" data-addon="studio-shoot" aria-pressed="false">
+        <span class="addon-check" aria-hidden="true"></span>
+        <h3><span class="lang-en">Studio shoot (in PBS studio)</span><span class="lang-es" hidden>Sesión en estudio</span></h3>
+        <p><span class="lang-en">Indoor shoot in PBS studio with backdrop. 2-hour minimum.</span><span class="lang-es" hidden>Sesión interior en el estudio PBS con fondo. Mínimo 2 horas.</span></p>
+      </button>
+
+    </div>
+
+    <div class="addon-summary">
+      <p>
+        <strong id="addonCount">0</strong>
+        <span id="addonCountLabel" class="lang-en"> add-ons selected</span>
+        <span class="lang-es" hidden> servicios seleccionados</span>
+      </p>
+      <a href="#contact" class="btn" id="addonCTA">
+        <span class="lang-en">Get a tailored quote →</span>
+        <span class="lang-es" hidden>Obtén una cotización a medida →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK (company strip) ============ -->
 <section id="work" class="reveal" aria-labelledby="work-h">
   <div class="container">
-    <p class="eyebrow">Our work</p>
-    <h2 id="work-h">Where we've put it to work.</h2>
-    <div class="work-grid">
+    <p class="eyebrow">
+      <span class="lang-en">Our work</span>
+      <span class="lang-es" hidden>Nuestro trabajo</span>
+    </p>
+    <h2 id="work-h">
+      <span class="lang-en">Where we've put it to work.</span>
+      <span class="lang-es" hidden>Donde lo hemos llevado a la práctica.</span>
+    </h2>
+    <p style="max-width:760px;">
+      <span class="lang-en">We're a young studio. Pics By Sash is our flagship client — real Meta ads, real bookings, a real dashboard. Ask us to walk you through it on the call. More launches coming.</span>
+      <span class="lang-es" hidden>Somos un estudio joven. Pics By Sash es nuestro cliente bandera — ads de Meta reales, reservas reales, dashboard real. Pídenos que te lo enseñemos en la llamada. Más lanzamientos vienen.</span>
+    </p>
 
-      <article class="work-card featured">
-        <div class="work-img">
-          <span class="pill">LIVE</span>
-        </div>
-        <div class="work-body">
-          <h3>Pics By Sash</h3>
-          <p>Sash's photography business is Cherry's first client. Real Meta ads, real bookings, a real dashboard you can ask to see. Honest test case before we onboard yours.</p>
-        </div>
-      </article>
-
-      <article class="work-card">
-        <div class="work-img">
-          <span class="pill soon">Coming Soon</span>
-        </div>
-        <div class="work-body">
-          <h3>Client 02</h3>
-          <p>Case study in development. Cafe / hospitality. Photos, social, and ads.</p>
-        </div>
-      </article>
-
-      <article class="work-card">
-        <div class="work-img">
-          <span class="pill soon">Coming Soon</span>
-        </div>
-        <div class="work-body">
-          <h3>Client 03</h3>
-          <p>Case study in development. Bilingual (English + Spanish) brand for Latin American market.</p>
-        </div>
-      </article>
-
+    <div class="company-strip">
+      <a class="company-strip-item is-live" href="https://picsbysash.com.au" target="_blank" rel="noopener">Pics By Sash</a>
+      <span class="company-strip-item is-soon"><span class="lang-en">Bridal couture · soon</span><span class="lang-es" hidden>Costura nupcial · pronto</span></span>
+      <span class="company-strip-item is-soon"><span class="lang-en">Hospitality · soon</span><span class="lang-es" hidden>Hostelería · pronto</span></span>
+      <span class="company-strip-item is-soon"><span class="lang-en">Latin American brand · soon</span><span class="lang-es" hidden>Marca latinoamericana · pronto</span></span>
     </div>
   </div>
 </section>
@@ -736,77 +835,99 @@
 <section class="trust reveal" aria-label="Trust signals">
   <div class="container">
     <div class="trust-strip">
-      <span>Melbourne small business marketing</span>
+      <span><span class="lang-en">Melbourne small business marketing</span><span class="lang-es" hidden>Marketing para PYMES en Melbourne</span></span>
       <span class="dot" aria-hidden="true"></span>
-      <span>Real photography, not stock</span>
+      <span><span class="lang-en">Real photography, not stock</span><span class="lang-es" hidden>Fotografía real, no stock</span></span>
       <span class="dot" aria-hidden="true"></span>
-      <span>Meta Ads on a real dashboard</span>
+      <span><span class="lang-en">Meta ads on a real dashboard</span><span class="lang-es" hidden>Ads de Meta en un dashboard real</span></span>
       <span class="dot" aria-hidden="true"></span>
-      <span>GoHighLevel · Claude AI</span>
-      <span class="dot" aria-hidden="true"></span>
-      <span>Bilingual EN · ES</span>
+      <span><span class="lang-en">Bilingual EN · ES</span><span class="lang-es" hidden>Bilingüe EN · ES</span></span>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ (AEO) ============ -->
-<section class="reveal" id="faq" aria-labelledby="faq-h">
+<section class="reveal section-alt" id="faq" aria-labelledby="faq-h">
   <div class="container">
-    <p class="eyebrow green">Frequently asked</p>
-    <h2 id="faq-h">The questions <span style="color:var(--cherry)">we actually get.</span></h2>
+    <p class="eyebrow green">
+      <span class="lang-en">Frequently asked</span>
+      <span class="lang-es" hidden>Preguntas frecuentes</span>
+    </p>
+    <h2 id="faq-h">
+      <span class="lang-en">The questions <span style="color:var(--cherry)">we actually get.</span></span>
+      <span class="lang-es" hidden>Las preguntas <span style="color:var(--cherry)">que nos hacen.</span></span>
+    </h2>
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          <span>What does Cherry Content do?</span>
+          <span><span class="lang-en">What does Cherry Content do?</span><span class="lang-es" hidden>¿Qué hace Cherry Content?</span></span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a">
-          <p>Marketing for small businesses that don't have time to do it themselves. We shoot original photography of your team and space, run your Instagram / Pinterest / TikTok, manage your Meta ads, and build your website. One team, one monthly invoice, 6-month minimum.</p>
+          <p>
+            <span class="lang-en">Cherry Content is a creative growth studio for Melbourne small businesses. We shoot original photography, run your Instagram and Facebook, manage your Meta ads, and build your website. One team — Sash and Valentina. One monthly invoice. 6-month minimum.</span>
+            <span class="lang-es" hidden>Cherry Content es un estudio creativo para PYMES en Melbourne. Hacemos fotografía original, manejamos tu Instagram y Facebook, llevamos tus ads de Meta, y construimos tu web. Un equipo — Sash y Valentina. Una factura mensual. 6 meses mínimo.</span>
+          </p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          <span>Who is this for?</span>
+          <span><span class="lang-en">Who is this for?</span><span class="lang-es" hidden>¿Para quién es esto?</span></span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a">
-          <p>Melbourne small businesses — cafes, salons, coaches, trades, boutiques, and service businesses. If you're great at your craft but marketing eats your evenings, and you don't want to spend $5k/month on an agency, that's us.</p>
+          <p>
+            <span class="lang-en">Melbourne small businesses — cafes, salons, coaches, trades, boutiques, and service businesses. If you're great at your craft but marketing eats your evenings, and you don't want to spend $5k/month on an agency, that's us. We also work with Latin American brands in English and Spanish.</span>
+            <span class="lang-es" hidden>PYMES en Melbourne — cafés, salones, coaches, oficios, boutiques, y negocios de servicios. Si eres bueno en lo tuyo pero el marketing te come la tarde, y no quieres gastar 5 mil al mes en una agencia, somos para ti. También trabajamos con marcas latinoamericanas en inglés y español.</span>
+          </p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          <span>How are you different from a normal marketing agency?</span>
+          <span><span class="lang-en">How are you different from a normal marketing agency?</span><span class="lang-es" hidden>¿En qué se diferencian de una agencia normal?</span></span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a">
-          <p>Three things. One: we actually shoot real photography of you, your team and your space — most agencies use stock or AI imagery. Two: one team handles everything, not five freelancers who don't talk to each other — Valentina runs social and content, Sash runs ads and strategy. Three: monthly reports in plain English. We tell you what worked, what didn't, and what we're changing next — no buzzwords.</p>
+          <p>
+            <span class="lang-en">Three things. One: we shoot real photography of you, your team and your space — most agencies use stock or AI imagery. Two: one team handles everything, not five freelancers who don't talk to each other — Valentina runs social and content, Sash runs ads, strategy and photography. Three: monthly reports in plain English. We tell you what worked, what didn't, and what we're changing next.</span>
+            <span class="lang-es" hidden>Tres cosas. Una: hacemos fotografía real de ti, tu equipo y tu espacio — la mayoría usa stock o IA. Dos: un solo equipo lo hace todo, no cinco freelancers descoordinados — Valentina lleva redes y contenido, Sash lleva ads, estrategia y fotografía. Tres: reportes mensuales en lenguaje simple. Te decimos qué funcionó, qué no, y qué vamos a cambiar.</span>
+          </p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          <span>What is AI Lead Management and do I need it?</span>
+          <span><span class="lang-en">How does pricing work?</span><span class="lang-es" hidden>¿Cómo es el precio?</span></span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a">
-          <p>It's an optional add-on for when you're ready to invest in the stack. It catches every enquiry across WhatsApp, SMS, email and DMs, drafts replies that you approve in one tap, and tracks every lead through a CRM. Built on GoHighLevel and Claude AI. There's a tooling cost on top of your monthly tier because the software isn't free — talk to us when you're ready, not before.</p>
+          <p>
+            <span class="lang-en">We don't publish a price list because every business has different needs. We have four packages — Bloom, Cherry, Orchard, and Vineyard — that scale from photo-only retainer up to full-stack white-label. Book a free 15-minute call and we'll quote you a package that fits where your business actually is.</span>
+            <span class="lang-es" hidden>No publicamos precios porque cada negocio tiene necesidades distintas. Tenemos cuatro paquetes — Bloom, Cherry, Orchard y Vineyard — que van desde solo fotografía hasta servicio completo. Agenda una llamada gratis y te cotizamos un paquete que se ajusta a tu negocio.</span>
+          </p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          <span>Where are you based?</span>
+          <span><span class="lang-en">Where are you based?</span><span class="lang-es" hidden>¿Dónde están?</span></span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a">
-          <p>Melbourne, Australia. Valentina splits time between Melbourne and Spain (moving full-time to Spain in August 2026), so we cover Australia and Latin America in English and Spanish.</p>
+          <p>
+            <span class="lang-en">Melbourne, Australia. Valentina splits time between Melbourne and Spain, so we cover Australia and Latin America in English and Spanish.</span>
+            <span class="lang-es" hidden>Melbourne, Australia. Valentina vive entre Melbourne y España, así que cubrimos Australia y América Latina en inglés y español.</span>
+          </p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          <span>How do I start?</span>
+          <span><span class="lang-en">How do I start?</span><span class="lang-es" hidden>¿Cómo empezamos?</span></span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a">
-          <p>Book a free 15-minute audit. Send us your Instagram, your Meta ads (if you have any), and your website. We tell you what's working, what's not, and what we'd change first. No deck, no pitch — just a working session.</p>
+          <p>
+            <span class="lang-en">Book a free 15-minute call. Send us your Instagram, your Meta ads (if you have any), and your website. We tell you what's working, what's not, and what we'd change first. No deck, no pitch — just a working session.</span>
+            <span class="lang-es" hidden>Agenda una llamada gratis de 15 minutos. Mándanos tu Instagram, tus ads de Meta (si los tienes), y tu sitio web. Te decimos qué funciona, qué no, y qué cambiaríamos primero. Sin presentación, sin pitch — una sesión de trabajo.</span>
+          </p>
         </div>
       </div>
     </div>
@@ -816,10 +937,22 @@
 <!-- ============ CTA ============ -->
 <section class="cta reveal" aria-labelledby="cta-h">
   <div class="container">
-    <p class="eyebrow" style="color:var(--cherry-soft)">Ready to start?</p>
-    <h2 id="cta-h">Want a free 15-minute audit <span class="accent">of your marketing?</span></h2>
-    <p>We look at your Instagram, your ads, your site. Tell you what's working and what's not. You decide if you want to keep talking. No deck, no pitch, just a working session.</p>
-    <a href="#contact" class="btn">Book a free audit</a>
+    <p class="eyebrow" style="color:var(--cherry-soft)">
+      <span class="lang-en">Ready to start?</span>
+      <span class="lang-es" hidden>¿Listo para empezar?</span>
+    </p>
+    <h2 id="cta-h">
+      <span class="lang-en">Want a free 15-minute call <span class="accent">about your marketing?</span></span>
+      <span class="lang-es" hidden>¿Quieres una llamada gratis <span class="accent">sobre tu marketing?</span></span>
+    </h2>
+    <p>
+      <span class="lang-en">We look at your Instagram, your ads, your site. Tell you what's working and what's not. You decide if you want to keep talking. No deck, no pitch — just a working session.</span>
+      <span class="lang-es" hidden>Vemos tu Instagram, tus ads, tu web. Te decimos qué funciona y qué no. Tú decides si quieres seguir hablando. Sin presentación, sin pitch — una sesión de trabajo.</span>
+    </p>
+    <a href="#contact" class="btn">
+      <span class="lang-en">Book a free call</span>
+      <span class="lang-es" hidden>Agenda una llamada gratis</span>
+    </a>
   </div>
 </section>
 
@@ -827,9 +960,18 @@
 <section id="contact" class="reveal" aria-labelledby="contact-h">
   <div class="container contact-grid">
     <div class="contact-info">
-      <p class="eyebrow green">Get in touch</p>
-      <h2 id="contact-h">Tell us about <span class="accent">your business.</span></h2>
-      <p>Tell us what you do, where you are, and what's not working in your marketing right now. We respond within one business day.</p>
+      <p class="eyebrow green">
+        <span class="lang-en">Get in touch</span>
+        <span class="lang-es" hidden>Contáctanos</span>
+      </p>
+      <h2 id="contact-h">
+        <span class="lang-en">Tell us about <span class="accent">your business.</span></span>
+        <span class="lang-es" hidden>Cuéntanos sobre <span class="accent">tu negocio.</span></span>
+      </h2>
+      <p>
+        <span class="lang-en">Tell us what you do, where you are, and what's not working in your marketing right now. We respond within one business day.</span>
+        <span class="lang-es" hidden>Cuéntanos qué haces, dónde estás, y qué no te funciona en marketing ahora. Respondemos en un día hábil.</span>
+      </p>
       <ul class="info-list">
         <li>
           <span class="label">Sashank</span>
@@ -846,22 +988,22 @@
           </span>
         </li>
         <li><span class="label">Studio</span> Melbourne, Australia · Remote-first</li>
-        <li><span class="label">Languages</span> English · Spanish</li>
-        <li><span class="label">Partners</span> Pics By Sash · GHL · Claude AI</li>
+        <li><span class="label">Languages</span> English · Español</li>
       </ul>
     </div>
 
     <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="company-website" action="thank-you.html">
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="selected-addons" id="selectedAddonsField" value="" />
       <p class="honeypot"><label>Don't fill this: <input name="company-website" /></label></p>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="name">Your name</label>
+          <label for="name"><span class="lang-en">Your name</span><span class="lang-es" hidden>Tu nombre</span></label>
           <input id="name" type="text" name="name" required autocomplete="name" />
         </div>
         <div class="form-group">
-          <label for="business">Business</label>
+          <label for="business"><span class="lang-en">Business</span><span class="lang-es" hidden>Negocio</span></label>
           <input id="business" type="text" name="business" required autocomplete="organization" />
         </div>
       </div>
@@ -872,30 +1014,33 @@
           <input id="email" type="email" name="email" required autocomplete="email" />
         </div>
         <div class="form-group">
-          <label for="phone">Phone</label>
+          <label for="phone"><span class="lang-en">Phone</span><span class="lang-es" hidden>Teléfono</span></label>
           <input id="phone" type="tel" name="phone" autocomplete="tel" />
         </div>
       </div>
 
       <div class="form-group">
-        <label for="interest">What are you looking for?</label>
+        <label for="interest"><span class="lang-en">What package are you interested in?</span><span class="lang-es" hidden>¿Qué paquete te interesa?</span></label>
         <select id="interest" name="interest" required>
-          <option value="">Pick one…</option>
-          <option>Photography + Content</option>
-          <option>Meta Ads</option>
-          <option>Websites + SEO</option>
-          <option>AI Lead Management (optional add-on)</option>
-          <option>The whole package</option>
+          <option value="">Pick one… / Elige uno…</option>
+          <option>Bloom — photo-led starter</option>
+          <option>Cherry — full-service growth</option>
+          <option>Orchard — paid acceleration</option>
+          <option>Vineyard — full-stack white-label</option>
+          <option>A-la-carte add-ons (see selections below)</option>
           <option>Not sure — show me what fits</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="message">Anything you want us to know? (optional)</label>
+        <label for="message"><span class="lang-en">Anything you want us to know? (optional)</span><span class="lang-es" hidden>¿Algo que debamos saber? (opcional)</span></label>
         <textarea id="message" name="message" rows="4" placeholder="What kind of business, what's not working, what you're trying to fix."></textarea>
       </div>
 
-      <button type="submit" class="btn">Send</button>
+      <button type="submit" class="btn">
+        <span class="lang-en">Send</span>
+        <span class="lang-es" hidden>Enviar</span>
+      </button>
     </form>
   </div>
 </section>
@@ -907,35 +1052,38 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="assets/logo.png" alt="Cherry Content" width="96" height="96" class="footer-logo" />
-        <p style="font-size:.94rem;margin-top:14px;">Marketing for small businesses who don't have time to do it themselves. One team, one invoice. Built in Melbourne.</p>
+        <img src="assets/logo-256.png" alt="Cherry Content" width="96" height="96" class="footer-logo" loading="lazy" decoding="async" />
+        <p style="font-size:.94rem;margin-top:14px;">
+          <span class="lang-en">Intelligent strategy. Global impact. A creative growth studio for Melbourne small businesses. Built by Sash and Valentina.</span>
+          <span class="lang-es" hidden>Estrategia inteligente. Impacto global. Un estudio creativo para PYMES de Melbourne. Por Sash y Valentina.</span>
+        </p>
       </div>
       <div>
-        <h4>What we do</h4>
+        <h3 class="footer-h"><span class="lang-en">What we do</span><span class="lang-es" hidden>Qué hacemos</span></h3>
         <ul>
-          <li><a href="#services">Photography + Content</a></li>
-          <li><a href="#services">Meta Ads</a></li>
-          <li><a href="#services">Websites + SEO</a></li>
-          <li><a href="#services">AI Lead Management</a></li>
+          <li><a href="#services"><span class="lang-en">Photography + Content</span><span class="lang-es" hidden>Fotografía + Contenido</span></a></li>
+          <li><a href="#services"><span class="lang-en">Meta Ads</span><span class="lang-es" hidden>Meta Ads</span></a></li>
+          <li><a href="#services"><span class="lang-en">Websites + SEO</span><span class="lang-es" hidden>Sitios + SEO</span></a></li>
+          <li><a href="#add-ons"><span class="lang-en">A-la-carte add-ons</span><span class="lang-es" hidden>Servicios a la carta</span></a></li>
         </ul>
       </div>
       <div>
-        <h4>The studio</h4>
+        <h3 class="footer-h"><span class="lang-en">The studio</span><span class="lang-es" hidden>El estudio</span></h3>
         <ul>
-          <li><a href="about.html">About Sash &amp; Valentina</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="about.html"><span class="lang-en">About Sash &amp; Valentina</span><span class="lang-es" hidden>Sobre Sash y Valentina</span></a></li>
+          <li><a href="#packages"><span class="lang-en">Packages</span><span class="lang-es" hidden>Paquetes</span></a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-es" hidden>Contacto</span></a></li>
         </ul>
       </div>
       <div>
-        <h4>Reach Us</h4>
+        <h3 class="footer-h"><span class="lang-en">Reach us</span><span class="lang-es" hidden>Contáctanos</span></h3>
         <ul>
           <li><a href="mailto:sashank@cherrycontent.com.au">sashank@cherrycontent.com.au</a></li>
           <li><a href="tel:+61417109970">+61 417 109 970</a></li>
           <li><a href="mailto:valentina@cherrycontent.com.au">valentina@cherrycontent.com.au</a></li>
           <li><a href="tel:+61416507682">+61 416 507 682</a></li>
-          <li>Melbourne, Australia · EN · ES</li>
+          <li>Melbourne · EN · ES</li>
         </ul>
       </div>
     </div>

@@ -5,23 +5,23 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-  /* Brand palette (from logo) */
-  --cherry: #7B1F2C;          /* burgundy / cherry body */
-  --cherry-deep: #5E1622;
-  --cherry-soft: #F4E4E7;
-  --forest: #1F7A3A;          /* green leaf / circuit */
-  --forest-deep: #155728;
-  --forest-soft: #E4F1E9;
-  --ink: #0A0A0A;             /* primary text */
+  /* Brand palette (per Valentina's brief) */
+  --cherry: #79011A;          /* primary cherry */
+  --cherry-deep: #5A0114;
+  --cherry-soft: #F4E0E4;
+  --forest: #1D7C2A;          /* accent green */
+  --forest-deep: #135C1E;
+  --forest-soft: #E2F1E5;
+  --ink: #000000;             /* primary text per brief */
   --ink-2: #2E2E2E;
-  --ink-3: #6B6B6B;
-  --ink-4: #B0B0B0;
+  --ink-3: #595959;        /* darkened from #6B6B6B for AA contrast safety (>7:1 on white) */
+  --ink-4: #767676;        /* darkened from #B0B0B0; only used decoratively, but tightened anyway */
   --paper: #FFFFFF;
-  --paper-alt: #F5F1EC;       /* cream alt section */
-  --paper-grey: #ECECEC;      /* light grey from logo bg */
+  --paper-alt: #F7F4F1;       /* warm cream for alt sections */
+  --paper-grey: #EDEDED;      /* brief background hex */
 
-  /* Type */
-  --display: 'Anton', 'Helvetica Neue Condensed', 'Impact', sans-serif;
+  /* Type — Montserrat Bold for headings, Montserrat for body (per brief) */
+  --display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Layout */
@@ -53,17 +53,17 @@ button { font-family: inherit; cursor: pointer; }
 /* ---------- Typography ---------- */
 h1, h2, h3, h4 {
   font-family: var(--display);
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  line-height: 1.1;
   margin: 0 0 0.4em;
   color: var(--ink);
   text-transform: uppercase;
 }
-h1 { font-size: clamp(2.6rem, 6vw, 5rem); }
-h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); }
-h3 { font-size: clamp(1.3rem, 2.4vw, 1.75rem); }
-h4 { font-size: 1.1rem; letter-spacing: 0.04em; }
+h1 { font-size: clamp(2.2rem, 5vw, 4.2rem); line-height: 1.05; }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.8rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 700; }
+h4 { font-size: 1.05rem; letter-spacing: 0.04em; font-weight: 700; }
 p { margin: 0 0 1em; }
 .eyebrow {
   font-family: var(--body);
@@ -1051,4 +1051,195 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
     transition-duration: 0.01ms !important;
   }
   html { scroll-behavior: auto; }
+}
+
+/* ==========================================================================
+   v2 additions — Add-on selector, language toggle, company strip
+   ========================================================================== */
+
+/* ---------- Language toggle ---------- */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 12px;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-pill);
+  padding: 2px;
+  background: var(--paper);
+  font-family: var(--body);
+}
+.lang-toggle button {
+  background: transparent;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+.lang-toggle button.is-active {
+  background: var(--cherry);
+  color: var(--paper);
+}
+[data-lang="es"] .lang-en,
+[data-lang="en"] .lang-es { display: none; }
+.lang-es { display: none; } /* default until JS runs */
+
+/* ---------- Add-ons section ---------- */
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
+.addon-card {
+  background: var(--paper);
+  border: 2px solid var(--paper-grey);
+  border-radius: var(--radius-card);
+  padding: 22px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  font-family: var(--body);
+  color: var(--ink);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.addon-card:hover,
+.addon-card:focus-visible {
+  border-color: var(--cherry-soft);
+  transform: translateY(-2px);
+  outline: none;
+}
+.addon-card.is-selected {
+  border-color: var(--cherry);
+  background: var(--cherry-soft);
+  box-shadow: 0 4px 14px rgba(121, 1, 26, 0.16);
+}
+.addon-card .addon-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--cherry);
+}
+.addon-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.addon-card p {
+  font-size: 0.86rem;
+  color: var(--ink-3);
+  margin: 0;
+  line-height: 1.5;
+}
+.addon-card .addon-check {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--ink-4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  transition: all 180ms ease;
+}
+.addon-card.is-selected .addon-check {
+  background: var(--cherry);
+  border-color: var(--cherry);
+}
+.addon-card.is-selected .addon-check::after {
+  content: "✓";
+  color: var(--paper);
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.addon-summary {
+  margin-top: 36px;
+  padding: 22px 28px;
+  background: var(--paper-grey);
+  border-radius: var(--radius-card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.addon-summary p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.addon-summary p strong {
+  color: var(--cherry);
+  font-size: 1.2rem;
+}
+
+/* ---------- Company strip (replacing work thumbnails) ---------- */
+.company-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 36px 56px;
+  padding: 32px 24px;
+  background: var(--paper-grey);
+  border-radius: var(--radius-card);
+  margin-top: 24px;
+}
+.company-strip-item {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 200ms ease;
+}
+.company-strip-item:hover { opacity: 1; }
+.company-strip-item.is-live {
+  color: var(--cherry);
+  opacity: 1;
+}
+.company-strip-item.is-soon {
+  font-style: italic;
+  font-weight: 500;
+  opacity: 0.55;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Footer headings (h3 semantically, h4-sized visually for the existing footer design) ---------- */
+.footer-h {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 0.6em;
+  color: var(--ink);
+}
+
+/* ---------- 4-col grid (for tiers with Vineyard) ---------- */
+.cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+@media (max-width: 1024px) {
+  .cols-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cols-4 { grid-template-columns: 1fr; }
 }

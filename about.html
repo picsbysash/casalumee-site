@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <title>About Cherry Content — Sash + Valentina, the team behind your marketing</title>
-  <meta name="description" content="Cherry Content is run by Sashank B (performance marketing, Meta ads, photography) and Valentina Torres Charry (social, content, brand, English + Spanish). Melbourne-based, working with small businesses." />
+  <meta name="description" content="Cherry Content is run by Sashank B (performance marketing, Meta ads, photography) and Valentina Torres Charry (social, content, brand, English + Spanish). Melbourne-based, bilingual." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://cherrycontent.com.au/about.html" />
+  <link rel="alternate" hreflang="en-AU" href="https://cherrycontent.com.au/about.html" />
+  <link rel="alternate" hreflang="es" href="https://cherrycontent.com.au/about.html?lang=es" />
+  <link rel="alternate" hreflang="x-default" href="https://cherrycontent.com.au/about.html" />
 
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="About Cherry Content — Sash + Valentina" />
-  <meta property="og:description" content="Two co-founders. One team. We run small business marketing like it's our own — because at Pics By Sash, we already do." />
+  <meta property="og:description" content="Two co-founders. One team. We run small business marketing like it's our own." />
   <meta property="og:url" content="https://cherrycontent.com.au/about.html" />
   <meta property="og:site_name" content="Cherry Content" />
   <meta property="og:image" content="https://cherrycontent.com.au/assets/og-image.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#79011A" />
+  <meta name="color-scheme" content="light" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -38,7 +45,7 @@
         {
           "@type": "Person",
           "name": "Valentina Torres Charry",
-          "jobTitle": "Co-founder · Creative Direction, Design Aesthetics & Social Media Strategy",
+          "jobTitle": "Co-founder · Creative Direction, Brand & Social Media",
           "knowsAbout": [
             "Design aesthetics",
             "Social media strategy",
@@ -50,42 +57,30 @@
             "Client success",
             "Bilingual content (English and Spanish)"
           ],
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Cherry Content"
-          }
+          "worksFor": { "@type": "Organization", "name": "Cherry Content" }
         },
         {
           "@type": "Person",
           "name": "Sashank B",
-          "jobTitle": "Co-founder · Numbers-Driven Marketing, Applied AI & Performance",
+          "jobTitle": "Co-founder · Performance Marketing, Photography & Strategy",
           "knowsAbout": [
-            "Numbers-driven performance marketing",
+            "Performance marketing",
             "Meta Ads strategy",
-            "Cost per lead optimisation",
             "Conversion rate optimisation",
-            "Pipeline velocity analytics",
-            "AI marketing systems",
             "Marketing automation",
-            "HubSpot CRM",
             "Six Sigma Black Belt methodology",
             "Business analysis",
             "Data analytics",
             "Project management",
             "Photography direction"
           ],
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Cherry Content"
-          },
+          "worksFor": { "@type": "Organization", "name": "Cherry Content" },
           "owns": {
             "@type": "Organization",
             "name": "Pics By Sash",
             "url": "https://picsbysash.com.au"
           },
-          "sameAs": [
-            "https://picsbysash.com.au"
-          ]
+          "sameAs": ["https://picsbysash.com.au"]
         }
       ]
     }
@@ -112,18 +107,26 @@
 <header class="nav" role="banner">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Cherry Content home">
-      <img src="assets/logo.png" alt="Cherry Content — marketing for small businesses, Melbourne" width="64" height="64" />
+      <img src="assets/logo-256.png" alt="Cherry Content — creative growth studio, Melbourne" width="64" height="64" fetchpriority="high" decoding="async" />
     </a>
     <nav aria-label="Primary">
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#services">What we do</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="index.html#work">Work</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#services"><span class="lang-en">What we do</span><span class="lang-es" hidden>Qué hacemos</span></a></li>
+        <li><a href="index.html#packages"><span class="lang-en">Packages</span><span class="lang-es" hidden>Paquetes</span></a></li>
+        <li><a href="index.html#add-ons"><span class="lang-en">Add-ons</span><span class="lang-es" hidden>Servicios</span></a></li>
+        <li><a href="index.html#work"><span class="lang-en">Our work</span><span class="lang-es" hidden>Trabajos</span></a></li>
+        <li><a href="about.html" aria-current="page"><span class="lang-en">About</span><span class="lang-es" hidden>Nosotros</span></a></li>
+        <li><a href="index.html#contact"><span class="lang-en">Contact</span><span class="lang-es" hidden>Contacto</span></a></li>
       </ul>
     </nav>
-    <a href="index.html#contact" class="btn nav-cta">Book a free audit</a>
+    <div class="lang-toggle" role="group" aria-label="Language toggle">
+      <button type="button" data-lang-set="en" class="is-active" aria-pressed="true">EN</button>
+      <button type="button" data-lang-set="es" aria-pressed="false">ES</button>
+    </div>
+    <a href="index.html#contact" class="btn nav-cta">
+      <span class="lang-en">Book a call</span>
+      <span class="lang-es" hidden>Agenda una llamada</span>
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -133,9 +136,18 @@
 <!-- ABOUT HERO -->
 <section class="about-hero reveal" aria-labelledby="about-h">
   <div class="container">
-    <p class="eyebrow">Who we are</p>
-    <h1 id="about-h">Two co-founders. One team. <span class="accent">We run your marketing like it's our own.</span></h1>
-    <p>Cherry Content is run end-to-end by Sash and Valentina. No account-manager handoffs. No "your contact is on leave." You always know who's doing your marketing — because it's us, every time.</p>
+    <p class="eyebrow">
+      <span class="lang-en">Who we are</span>
+      <span class="lang-es" hidden>Quiénes somos</span>
+    </p>
+    <h1 id="about-h">
+      <span class="lang-en">Two co-founders. One team. <span class="accent">We run your marketing like it's our own.</span></span>
+      <span class="lang-es" hidden>Dos cofundadores. Un equipo. <span class="accent">Llevamos tu marketing como si fuera nuestro.</span></span>
+    </h1>
+    <p>
+      <span class="lang-en">Cherry Content is run end-to-end by Sash and Valentina. No account-manager handoffs. No "your contact is on leave." You always know who's doing your marketing — because it's us, every time.</span>
+      <span class="lang-es" hidden>Cherry Content lo manejamos de punta a punta Sash y Valentina. Sin pases a account managers. Sin "tu contacto está de vacaciones." Siempre sabes quién hace tu marketing — porque somos nosotros, todas las veces.</span>
+    </p>
   </div>
 </section>
 
@@ -143,15 +155,28 @@
 <section class="reveal" aria-labelledby="story-h">
   <div class="container">
     <div class="story">
-      <div class="portrait" aria-hidden="true">
-        <!-- placeholder gradient; replace with studio photo when ready -->
-      </div>
+      <div class="portrait" aria-hidden="true"></div>
       <div class="copy">
-        <p class="eyebrow green">Why we started this</p>
-        <h2 id="story-h">Small businesses get sold expensive marketing all the time. <span style="color:var(--cherry)">Most of it doesn't work.</span></h2>
-        <p>Vague reports. Stock photos. Ads that never convert. Social calendars that go quiet two months in. We've seen it happen to people we know — friends, family, clients of clients. We started Cherry Content to be the opposite: a team that actually shoots your photos, runs your social, builds your ads, and tells you in plain English what's working and what isn't.</p>
-        <p>Valentina runs the day-to-day — Instagram, Pinterest, TikTok, brand, captions, scheduling, client comms. Sash runs the numbers side — Meta ads, dashboards, conversion analysis — plus the photography studio (Pics By Sash) that does the shoots. Two people, two specialties, one team. That's the whole staff card.</p>
-        <p>We're small on purpose. We take on businesses we think we can actually move the needle for, and we tell you on the audit call if that's not you.</p>
+        <p class="eyebrow green">
+          <span class="lang-en">Why we started this</span>
+          <span class="lang-es" hidden>Por qué empezamos</span>
+        </p>
+        <h2 id="story-h">
+          <span class="lang-en">Small businesses get sold expensive marketing all the time. <span style="color:var(--cherry)">Most of it doesn't work.</span></span>
+          <span class="lang-es" hidden>A las PYMES les venden marketing caro todo el tiempo. <span style="color:var(--cherry)">La mayoría no funciona.</span></span>
+        </h2>
+        <p>
+          <span class="lang-en">Vague reports. Stock photos. Ads that never convert. Social calendars that go quiet two months in. We've seen it happen to people we know — friends, family, clients of clients. We started Cherry Content to be the opposite: a team that actually shoots your photos, runs your social, builds your ads, and tells you in plain English what's working and what isn't.</span>
+          <span class="lang-es" hidden>Reportes vagos. Fotos de stock. Ads que no convierten. Calendarios sociales que se quedan en silencio a los dos meses. Lo hemos visto pasarle a gente cercana — amigos, familia, clientes de clientes. Empezamos Cherry Content para ser lo contrario: un equipo que de verdad hace tus fotos, lleva tus redes, construye tus ads, y te dice en lenguaje simple qué funciona y qué no.</span>
+        </p>
+        <p>
+          <span class="lang-en">Valentina runs the day-to-day — Instagram, Facebook, TikTok, brand, captions, scheduling, client comms. Sash runs the numbers side — Meta ads, dashboards, conversion analysis — plus the photography studio (Pics By Sash) that does the shoots. Two people, two specialties, one team. That's the whole staff card.</span>
+          <span class="lang-es" hidden>Valentina lleva el día a día — Instagram, Facebook, TikTok, marca, captions, calendario, comunicación con clientes. Sash lleva los números — Meta ads, dashboards, análisis de conversión — más el estudio de fotografía (Pics By Sash) que hace los shoots. Dos personas, dos especialidades, un equipo. Esa es toda la nómina.</span>
+        </p>
+        <p>
+          <span class="lang-en">We're small on purpose. We take on businesses we think we can actually move the needle for, and we tell you on the audit call if that's not you.</span>
+          <span class="lang-es" hidden>Somos pequeños a propósito. Aceptamos negocios donde creemos que podemos mover la aguja, y te lo decimos en la llamada si no es tu caso.</span>
+        </p>
       </div>
     </div>
   </div>
@@ -160,20 +185,35 @@
 <!-- VALENTINA — featured -->
 <section class="section-alt reveal" aria-labelledby="valentina-h">
   <div class="container">
-    <p class="eyebrow">Co-founder · Brand, content, social</p>
+    <p class="eyebrow">
+      <span class="lang-en">Co-founder · Brand, content, social</span>
+      <span class="lang-es" hidden>Cofundadora · Marca, contenido, redes</span>
+    </p>
     <div class="founder-feature">
       <div class="founder-portrait" aria-hidden="true">
         <span>Portrait · Valentina</span>
       </div>
       <div>
         <h2 id="valentina-h">Valentina Torres Charry</h2>
-        <p class="founder-role-large">Social Media · Brand · Content · English + Spanish</p>
+        <p class="founder-role-large">
+          <span class="lang-en">Social Media · Brand · Content · English + Spanish</span>
+          <span class="lang-es" hidden>Redes sociales · Marca · Contenido · Inglés + Español</span>
+        </p>
 
-        <p>Valentina runs the creative side. She handles brand look-and-feel, social media strategy, content calendars, captions, scheduling, community — basically all the stuff customers actually see and read.</p>
+        <p>
+          <span class="lang-en">Valentina runs the creative side. She handles brand look-and-feel, social media strategy, content calendars, captions, scheduling, community — basically all the stuff customers actually see and read.</span>
+          <span class="lang-es" hidden>Valentina lleva el lado creativo. Se encarga del look-and-feel de marca, estrategia de redes, calendarios de contenido, captions, calendario, comunidad — básicamente todo lo que los clientes ven y leen.</span>
+        </p>
 
-        <p>She built the studio's tone-of-voice system and runs all client communication. She works in English and Spanish, which means we can serve Australian and Latin American clients with cultural fluency, not just translation.</p>
+        <p>
+          <span class="lang-en">She built the studio's tone-of-voice system and runs all client communication. She works in English and Spanish, which means we can serve Australian and Latin American clients with cultural fluency, not just translation.</span>
+          <span class="lang-es" hidden>Construyó el sistema de tono de voz del estudio y maneja toda la comunicación con clientes. Trabaja en inglés y español, lo que significa que servimos clientes australianos y latinoamericanos con fluidez cultural, no solo traducción.</span>
+        </p>
 
-        <p>Where most agencies treat social as a checklist someone ticks off on a Tuesday, Valentina treats it like the front line of your brand. For most small businesses, that's exactly what it is.</p>
+        <p>
+          <span class="lang-en">Where most agencies treat social as a checklist someone ticks off on a Tuesday, Valentina treats it like the front line of your brand. For most small businesses, that's exactly what it is.</span>
+          <span class="lang-es" hidden>Donde la mayoría de agencias tratan las redes como una lista que alguien chequea los martes, Valentina las trata como la primera línea de tu marca. Para la mayoría de PYMES, eso es exactamente lo que son.</span>
+        </p>
 
         <div class="founder-tags">
           <span class="founder-tag">Social media strategy</span>
@@ -192,24 +232,35 @@
 <!-- SASHANK -->
 <section class="reveal" aria-labelledby="sashank-h">
   <div class="container">
-    <p class="eyebrow green">Co-founder · Numbers, ads, photography</p>
+    <p class="eyebrow green">
+      <span class="lang-en">Co-founder · Numbers, ads, photography</span>
+      <span class="lang-es" hidden>Cofundador · Números, ads, fotografía</span>
+    </p>
     <div class="founder-feature reverse">
       <div class="founder-portrait" aria-hidden="true">
         <span>Portrait · Sashank</span>
       </div>
       <div>
         <h2 id="sashank-h">Sashank B</h2>
-        <p class="founder-role-large">Performance · Meta Ads · Photography (via Pics By Sash)</p>
+        <p class="founder-role-large">
+          <span class="lang-en">Performance · Meta Ads · Photography (via Pics By Sash)</span>
+          <span class="lang-es" hidden>Performance · Meta Ads · Fotografía (vía Pics By Sash)</span>
+        </p>
 
-        <p>Sash runs the numbers side. Meta ads, dashboards, conversion analysis — the techy stuff that decides whether the marketing actually works. Background: 15+ years as a senior business analyst at enterprise scale, plus a Six Sigma Black Belt — so "measurable" isn't a buzzword.</p>
+        <p>
+          <span class="lang-en">Sash runs the numbers side. Meta ads, dashboards, conversion analysis — the techy stuff that decides whether the marketing actually works. Background: 15+ years as a senior business analyst at enterprise scale, plus a Six Sigma Black Belt — so "measurable" isn't a buzzword.</span>
+          <span class="lang-es" hidden>Sash lleva el lado de los números. Meta ads, dashboards, análisis de conversión — la parte técnica que decide si el marketing realmente funciona. 15+ años como analista de negocio sénior a escala enterprise, más un Six Sigma Black Belt — así que "medible" no es un buzzword.</span>
+        </p>
 
-        <p>He also runs Pics By Sash, the Melbourne photography studio that powers Cherry's shoots. So when you book a Cherry tier with photography included, it's Sash behind the camera — not an outsourced contractor you've never met.</p>
+        <p>
+          <span class="lang-en">He also runs Pics By Sash, the Melbourne photography studio that powers Cherry's shoots. So when you book a Cherry tier with photography included, it's Sash behind the camera — not an outsourced contractor you've never met.</span>
+          <span class="lang-es" hidden>También dirige Pics By Sash, el estudio de fotografía de Melbourne que hace los shoots de Cherry. Así que cuando contratas un paquete con fotografía incluida, es Sash detrás de la cámara — no un freelancer que nunca conociste.</span>
+        </p>
 
         <div class="founder-tags">
           <span class="founder-tag">Performance marketing</span>
           <span class="founder-tag">Meta Ads</span>
           <span class="founder-tag">Marketing automation</span>
-          <span class="founder-tag">HubSpot · GHL</span>
           <span class="founder-tag">Six Sigma Black Belt</span>
           <span class="founder-tag">Photography (Pics By Sash)</span>
         </div>
@@ -219,53 +270,89 @@
 </section>
 
 <!-- BOOTS ON THE GROUND + GLOBAL TEAM -->
-<section class="reveal" aria-labelledby="global-h">
+<section class="reveal section-alt" aria-labelledby="global-h">
   <div class="container">
-    <p class="eyebrow">How we deliver</p>
-    <h2 id="global-h">Small team. <span style="color:var(--cherry)">On purpose.</span></h2>
-    <p style="max-width: 780px; font-size: 1.05rem; color: var(--ink-2); margin-bottom: 16px;">There are two of us. Sash in Melbourne, Valentina between Melbourne and Spain (moving full-time to Spain in August 2026). When you sign with Cherry, you're working directly with the people who do the work — strategy, shooting, posting, reporting. That's it.</p>
-    <p style="max-width: 780px; font-size: 1.05rem; color: var(--ink-2);">No layers of account managers. No "your contact is on leave." No outsourced freelancers we've never met. Just two people who own the outcome and answer the phone.</p>
+    <p class="eyebrow">
+      <span class="lang-en">How we deliver</span>
+      <span class="lang-es" hidden>Cómo trabajamos</span>
+    </p>
+    <h2 id="global-h">
+      <span class="lang-en">Small team. <span style="color:var(--cherry)">On purpose.</span></span>
+      <span class="lang-es" hidden>Equipo pequeño. <span style="color:var(--cherry)">A propósito.</span></span>
+    </h2>
+    <p style="max-width: 780px; font-size: 1.05rem; color: var(--ink-2); margin-bottom: 16px;">
+      <span class="lang-en">There are two of us. Sash in Melbourne, Valentina between Melbourne and Spain. When you sign with Cherry, you're working directly with the people who do the work — strategy, shooting, posting, reporting. That's it.</span>
+      <span class="lang-es" hidden>Somos dos. Sash en Melbourne, Valentina entre Melbourne y España. Cuando firmas con Cherry, trabajas directamente con quienes hacen el trabajo — estrategia, shoots, posteo, reportes. Punto.</span>
+    </p>
+    <p style="max-width: 780px; font-size: 1.05rem; color: var(--ink-2);">
+      <span class="lang-en">No layers of account managers. No "your contact is on leave." No outsourced freelancers we've never met. Just two people who own the outcome and answer the phone.</span>
+      <span class="lang-es" hidden>Sin capas de account managers. Sin "tu contacto está de vacaciones." Sin freelancers tercerizados que nunca conocimos. Solo dos personas que se hacen responsables del resultado y contestan el teléfono.</span>
+    </p>
 
     <div class="cols-3" style="margin-top: 48px;">
       <article class="col-card">
         <span class="num">01</span>
-        <h3>Founders do the work</h3>
-        <p>Sash and Valentina personally lead every engagement. Strategy, kickoff, the actual shoots, the reports. You know who's on the other end because you've already met them.</p>
+        <h3><span class="lang-en">Founders do the work</span><span class="lang-es" hidden>Los fundadores hacen el trabajo</span></h3>
+        <p>
+          <span class="lang-en">Sash and Valentina personally lead every engagement. Strategy, kickoff, the actual shoots, the reports. You know who's on the other end because you've already met them.</span>
+          <span class="lang-es" hidden>Sash y Valentina llevan cada cliente directamente. Estrategia, kickoff, los shoots, los reportes. Sabes quién está del otro lado porque ya lo conoces.</span>
+        </p>
       </article>
       <article class="col-card">
         <span class="num">02</span>
-        <h3>We pick our clients</h3>
-        <p>We don't take on everyone. If we don't think we can move the needle for your business, we'll tell you on the audit call. Saves us both time. Both sides win.</p>
+        <h3><span class="lang-en">We pick our clients</span><span class="lang-es" hidden>Elegimos a nuestros clientes</span></h3>
+        <p>
+          <span class="lang-en">We don't take on everyone. If we don't think we can move the needle for your business, we'll tell you on the audit call. Saves us both time.</span>
+          <span class="lang-es" hidden>No aceptamos a cualquiera. Si no creemos que podamos mover la aguja, te lo decimos en la llamada. Nos ahorra tiempo a los dos.</span>
+        </p>
       </article>
       <article class="col-card">
         <span class="num">03</span>
-        <h3>Two time zones, one team</h3>
-        <p>Melbourne + Spain. Briefs go in at one end of the day, reviews land the next morning. Time zones become an asset, not a coordination problem.</p>
+        <h3><span class="lang-en">Two time zones, one team</span><span class="lang-es" hidden>Dos zonas horarias, un equipo</span></h3>
+        <p>
+          <span class="lang-en">Melbourne + Spain. Briefs go in at one end of the day, reviews land the next morning. Time zones become an asset, not a coordination problem.</span>
+          <span class="lang-es" hidden>Melbourne + España. Los briefs entran a una hora del día, las revisiones llegan a la mañana siguiente. Las zonas horarias se vuelven una ventaja, no un problema.</span>
+        </p>
       </article>
     </div>
   </div>
 </section>
 
 <!-- WHY (3 numbered rows) -->
-<section class="section-alt reveal" aria-labelledby="why-h">
+<section class="reveal" aria-labelledby="why-h">
   <div class="container">
-    <p class="eyebrow green">Why work with us</p>
-    <h2 id="why-h">Three things <span style="color:var(--cherry)">we promise.</span></h2>
+    <p class="eyebrow green">
+      <span class="lang-en">Why work with us</span>
+      <span class="lang-es" hidden>Por qué elegirnos</span>
+    </p>
+    <h2 id="why-h">
+      <span class="lang-en">Three things <span style="color:var(--cherry)">we promise.</span></span>
+      <span class="lang-es" hidden>Tres cosas <span style="color:var(--cherry)">que prometemos.</span></span>
+    </h2>
     <div class="cols-3">
       <article class="col-card">
         <span class="num">01</span>
-        <h3>We shoot real photos</h3>
-        <p>No stock, no AI-generated lifestyle shots. Real photos of you, your team and your space. The shoot is included in Cherry and Orchard tiers, and Sash is the one with the camera.</p>
+        <h3><span class="lang-en">We shoot real photos</span><span class="lang-es" hidden>Fotos reales, sin stock</span></h3>
+        <p>
+          <span class="lang-en">No stock, no AI-generated lifestyle shots. Real photos of you, your team and your space. The shoot is included in Cherry, Orchard, and Vineyard — and Sash is the one with the camera.</span>
+          <span class="lang-es" hidden>Sin stock, sin imágenes generadas por IA. Fotos reales de ti, tu equipo y tu espacio. El shoot está incluido en Cherry, Orchard y Vineyard — y Sash es el que está con la cámara.</span>
+        </p>
       </article>
       <article class="col-card">
         <span class="num">02</span>
-        <h3>Plain-English reports</h3>
-        <p>Monthly dashboard in your inbox. What worked, what didn't, what we're trying next. No buzzwords, no charts you can't read, no "Q3 synergies."</p>
+        <h3><span class="lang-en">Plain-English reports</span><span class="lang-es" hidden>Reportes en lenguaje simple</span></h3>
+        <p>
+          <span class="lang-en">Monthly dashboard in your inbox. What worked, what didn't, what we're trying next. No buzzwords, no charts you can't read.</span>
+          <span class="lang-es" hidden>Dashboard mensual en tu inbox. Qué funcionó, qué no, qué vamos a probar. Sin buzzwords, sin gráficos que no entiendas.</span>
+        </p>
       </article>
       <article class="col-card">
         <span class="num">03</span>
-        <h3>Honest about what we can do</h3>
-        <p>If you'd be better off with a one-off photographer or a different agency, we'll tell you. We only take on businesses we can actually help — saves us both time.</p>
+        <h3><span class="lang-en">Honest about what we can do</span><span class="lang-es" hidden>Honestos sobre lo que podemos hacer</span></h3>
+        <p>
+          <span class="lang-en">If you'd be better off with a one-off photographer or a different agency, we'll tell you. We only take on businesses we can actually help.</span>
+          <span class="lang-es" hidden>Si te conviene más un fotógrafo único o una agencia diferente, te lo decimos. Solo aceptamos negocios donde podemos ayudar de verdad.</span>
+        </p>
       </article>
     </div>
   </div>
@@ -274,10 +361,22 @@
 <!-- CTA -->
 <section class="cta reveal" aria-labelledby="cta-h">
   <div class="container">
-    <p class="eyebrow" style="color:var(--cherry-soft)">Want to chat?</p>
-    <h2 id="cta-h">Free 15-minute audit. <span class="accent">No pitch.</span></h2>
-    <p>Send us your Instagram, your ads, and your site. We tell you what we'd change. You decide if you want to keep talking.</p>
-    <a href="index.html#contact" class="btn">Book a free audit</a>
+    <p class="eyebrow" style="color:var(--cherry-soft)">
+      <span class="lang-en">Want to chat?</span>
+      <span class="lang-es" hidden>¿Quieres hablar?</span>
+    </p>
+    <h2 id="cta-h">
+      <span class="lang-en">Free 15-minute call. <span class="accent">No pitch.</span></span>
+      <span class="lang-es" hidden>Llamada gratis de 15 minutos. <span class="accent">Sin pitch.</span></span>
+    </h2>
+    <p>
+      <span class="lang-en">Send us your Instagram, your ads, and your site. We tell you what we'd change. You decide if you want to keep talking.</span>
+      <span class="lang-es" hidden>Mándanos tu Instagram, tus ads y tu web. Te decimos qué cambiaríamos. Tú decides si quieres seguir hablando.</span>
+    </p>
+    <a href="index.html#contact" class="btn">
+      <span class="lang-en">Book a free call</span>
+      <span class="lang-es" hidden>Agenda una llamada gratis</span>
+    </a>
   </div>
 </section>
 
@@ -287,35 +386,38 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="assets/logo.png" alt="Cherry Content" width="96" height="96" class="footer-logo" />
-        <p style="font-size:.94rem;margin-top:14px;">Marketing for small businesses who don't have time to do it themselves. One team, one invoice. Built in Melbourne.</p>
+        <img src="assets/logo-256.png" alt="Cherry Content" width="96" height="96" class="footer-logo" loading="lazy" decoding="async" />
+        <p style="font-size:.94rem;margin-top:14px;">
+          <span class="lang-en">Intelligent strategy. Global impact. A creative growth studio for Melbourne small businesses. Built by Sash and Valentina.</span>
+          <span class="lang-es" hidden>Estrategia inteligente. Impacto global. Un estudio creativo para PYMES de Melbourne. Por Sash y Valentina.</span>
+        </p>
       </div>
       <div>
-        <h4>What we do</h4>
+        <h3 class="footer-h"><span class="lang-en">What we do</span><span class="lang-es" hidden>Qué hacemos</span></h3>
         <ul>
-          <li><a href="index.html#services">Photography + Content</a></li>
-          <li><a href="index.html#services">Meta Ads</a></li>
-          <li><a href="index.html#services">Websites + SEO</a></li>
-          <li><a href="index.html#services">AI Lead Management</a></li>
+          <li><a href="index.html#services"><span class="lang-en">Photography + Content</span><span class="lang-es" hidden>Fotografía + Contenido</span></a></li>
+          <li><a href="index.html#services"><span class="lang-en">Meta Ads</span><span class="lang-es" hidden>Meta Ads</span></a></li>
+          <li><a href="index.html#services"><span class="lang-en">Websites + SEO</span><span class="lang-es" hidden>Sitios + SEO</span></a></li>
+          <li><a href="index.html#add-ons"><span class="lang-en">A-la-carte add-ons</span><span class="lang-es" hidden>Servicios a la carta</span></a></li>
         </ul>
       </div>
       <div>
-        <h4>The studio</h4>
+        <h3 class="footer-h"><span class="lang-en">The studio</span><span class="lang-es" hidden>El estudio</span></h3>
         <ul>
-          <li><a href="about.html">About Sash &amp; Valentina</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="about.html"><span class="lang-en">About Sash &amp; Valentina</span><span class="lang-es" hidden>Sobre Sash y Valentina</span></a></li>
+          <li><a href="index.html#packages"><span class="lang-en">Packages</span><span class="lang-es" hidden>Paquetes</span></a></li>
           <li><a href="index.html#faq">FAQ</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#contact"><span class="lang-en">Contact</span><span class="lang-es" hidden>Contacto</span></a></li>
         </ul>
       </div>
       <div>
-        <h4>Reach Us</h4>
+        <h3 class="footer-h"><span class="lang-en">Reach us</span><span class="lang-es" hidden>Contáctanos</span></h3>
         <ul>
           <li><a href="mailto:sashank@cherrycontent.com.au">sashank@cherrycontent.com.au</a></li>
           <li><a href="tel:+61417109970">+61 417 109 970</a></li>
           <li><a href="mailto:valentina@cherrycontent.com.au">valentina@cherrycontent.com.au</a></li>
           <li><a href="tel:+61416507682">+61 416 507 682</a></li>
-          <li>Melbourne, Australia · EN · ES</li>
+          <li>Melbourne · EN · ES</li>
         </ul>
       </div>
     </div>
