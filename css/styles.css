@@ -1255,6 +1255,21 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   text-align: center;
 }
 
+/* ---------- Story solution callout (green-highlighted answer to the red "Most of it doesn't work" headline) ---------- */
+.story-solution {
+  position: relative;
+  padding: 18px 22px 18px 26px;
+  border-left: 4px solid var(--forest);
+  background: var(--forest-soft);
+  border-radius: 0 10px 10px 0;
+  margin: 18px 0 8px;
+}
+.story-solution strong {
+  color: var(--forest);
+  font-weight: 800;
+  font-size: 1.08em;
+}
+
 /* ---------- Credibility block (about page — 2 / 10+ / 10 yrs) ---------- */
 .credibility-block {
   display: grid;
