@@ -128,35 +128,73 @@
 
   initLang();
 
-  /* ---- A-la-carte add-on selector ---- */
+  /* ---- A-la-carte add-on selector + live "Your tailored package" panel ---- */
   const addonGrid = document.getElementById('addonsGrid');
   const addonCount = document.getElementById('addonCount');
+  const addonPlural = document.getElementById('addonPlural');
+  const addonCountEs = document.querySelector('.addon-count-es');
+  const tailoredList = document.getElementById('tailoredList');
   const selectedAddonsField = document.getElementById('selectedAddonsField');
   const interestSelect = document.getElementById('interest');
   const messageField = document.getElementById('message');
   const addonCTA = document.getElementById('addonCTA');
   const selected = new Set();
 
-  // Map of add-on keys to readable labels (for the form payload)
+  // Add-on labels (EN + ES) keyed for both form payload and side panel rendering
   const addonLabels = {
-    'brand-identity': 'Brand identity + brand book',
-    'website-build': 'Website build',
-    'seo-foundation': 'SEO foundation (one-time)',
-    'seo-growth': 'SEO growth retainer (monthly)',
-    'gmb': 'Google My Business ranking',
-    'cro': 'Conversion optimisation sprint',
-    'ai-tracking': 'AI audience intelligence',
-    'crm-portal': 'Branded client CRM portal',
-    'brand-video': 'Brand video production',
-    'ads-training': 'Paid Ads training (4 sessions)',
-    'studio-shoot': 'Studio shoot (in PBS studio)',
+    'brand-identity': { en: 'Brand identity + brand book', es: 'Identidad de marca + manual' },
+    'website-build':  { en: 'Website build',                 es: 'Construcción de sitio web' },
+    'seo-foundation': { en: 'SEO foundation (one-time)',     es: 'Base de SEO (única vez)' },
+    'seo-growth':     { en: 'SEO growth (monthly)',          es: 'Crecimiento SEO (mensual)' },
+    'gmb':            { en: 'Google My Business ranking',    es: 'Ranking en Google My Business' },
+    'cro':            { en: 'Conversion optimisation sprint',es: 'Sprint de optimización de conversión' },
+    'ai-tracking':    { en: 'AI audience intelligence',      es: 'Inteligencia de audiencia con IA' },
+    'crm-portal':     { en: 'Branded client CRM portal',     es: 'Portal CRM con tu marca' },
+    'brand-video':    { en: 'Brand video production',        es: 'Producción de video de marca' },
+    'ads-training':   { en: 'Paid Ads training (4 sessions)',es: 'Capacitación en ads (4 sesiones)' },
+    'studio-shoot':   { en: 'Studio shoot',                  es: 'Sesión en estudio' },
+  };
+
+  const emptyMessages = {
+    en: 'Tick add-ons on the left to build your package.',
+    es: 'Selecciona servicios a la izquierda para armar tu paquete.',
   };
 
   function updateAddonUI() {
-    if (addonCount) addonCount.textContent = String(selected.size);
+    const n = selected.size;
+
+    // Counts
+    if (addonCount) addonCount.textContent = String(n);
+    if (addonCountEs) addonCountEs.textContent = String(n);
+    if (addonPlural) addonPlural.textContent = n === 1 ? '' : 's';
+
+    // Hidden form field (pipe-separated)
     if (selectedAddonsField) {
-      const labels = Array.from(selected).map((k) => addonLabels[k] || k);
+      const labels = Array.from(selected).map((k) => addonLabels[k] ? addonLabels[k].en : k);
       selectedAddonsField.value = labels.join(' | ');
+    }
+
+    // Live tailored package list
+    if (tailoredList) {
+      if (n === 0) {
+        tailoredList.innerHTML =
+          '<li class="tailored-empty">' +
+          '<span class="lang-en">' + emptyMessages.en + '</span>' +
+          '<span class="lang-es" hidden>' + emptyMessages.es + '</span>' +
+          '</li>';
+      } else {
+        tailoredList.innerHTML = Array.from(selected).map((k) => {
+          const label = addonLabels[k] || { en: k, es: k };
+          return '<li>'
+            + '<span class="lang-en">' + label.en + '</span>'
+            + '<span class="lang-es" hidden>' + label.es + '</span>'
+            + '</li>';
+        }).join('');
+      }
+      // Re-apply current language visibility to the newly-rendered spans
+      const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
+      tailoredList.querySelectorAll('.lang-' + (currentLang === 'es' ? 'en' : 'es')).forEach(el => el.hidden = true);
+      tailoredList.querySelectorAll('.lang-' + currentLang).forEach(el => el.hidden = false);
     }
   }
 
@@ -180,10 +218,9 @@
   }
 
   if (addonCTA) {
-    addonCTA.addEventListener('click', (e) => {
-      // Scroll behaviour is the default href, but we also auto-fill the form
+    addonCTA.addEventListener('click', () => {
       if (selected.size === 0) return;
-      const labels = Array.from(selected).map((k) => addonLabels[k] || k);
+      const labels = Array.from(selected).map((k) => addonLabels[k] ? addonLabels[k].en : k);
 
       // Auto-set the interest dropdown to the a-la-carte option
       if (interestSelect) {
