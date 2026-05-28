@@ -937,7 +937,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   align-items: center;
   justify-content: center;
 }
-.founder-portrait img { width: 100%; height: 100%; object-fit: cover; }
+.founder-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
 .founder-portrait > span {
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.72rem;
