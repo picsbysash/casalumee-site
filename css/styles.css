@@ -1413,6 +1413,21 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   padding: 4px 10px;
   border-radius: var(--radius-pill);
 }
+.tier-card .tier-price {
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.1;
+  margin: 4px 0 10px;
+}
+.tier-card .tier-price-sub {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+  margin-left: 2px;
+}
 .tier-card .tier-list {
   margin: 14px 0 0 18px;
   padding: 0;
