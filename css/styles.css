@@ -5,24 +5,27 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-  /* Brand palette (per Valentina's brief) */
-  --cherry: #79011A;          /* primary cherry */
-  --cherry-deep: #5A0114;
-  --cherry-soft: #F4E0E4;
-  --forest: #1D7C2A;          /* accent green */
-  --forest-deep: #135C1E;
-  --forest-soft: #E2F1E5;
-  --ink: #000000;             /* primary text per brief */
+  /* Brand palette — Casa Lumee Brand Book 2026 (Valentina).
+     Monochrome + single accent · proportion 55 ivory / 30 black / 10 wine / 5 gold.
+     Ivory & black build the piece; wine & gold sign it. Gold = fine lines/detail only. */
+  --cherry: #540101;          /* WINE bordeaux — signature accent: CTAs, links, headline emphasis */
+  --cherry-deep: #3A0000;     /* wine — hover / deepest */
+  --cherry-soft: #F0E3DC;     /* soft warm tint for gentle backgrounds */
+  --forest: #CA9C49;          /* CHAMPAGNE GOLD — fine accent: hairlines, borders, gradient blends */
+  --forest-deep: #A87E33;     /* deeper gold */
+  --forest-soft: #F6EEDD;     /* soft champagne tint */
+  --ink: #000000;             /* ink black — text & editorial */
   --ink-2: #2E2E2E;
-  --ink-3: #595959;        /* darkened from #6B6B6B for AA contrast safety (>7:1 on white) */
-  --ink-4: #767676;        /* darkened from #B0B0B0; only used decoratively, but tightened anyway */
-  --paper: #FFFFFF;
-  --paper-alt: #F7F4F1;       /* warm cream for alt sections */
-  --paper-grey: #EDEDED;      /* brief background hex */
+  --ink-3: #595959;
+  --ink-4: #767676;
+  --paper: #FDF8EE;           /* IVORY (marfil) — primary background & space */
+  --paper-alt: #F7F0E1;       /* deeper ivory for alternating sections */
+  --paper-grey: #F0E8D9;      /* warm ivory-grey */
+  --gold: #CA9C49;            /* champagne gold — fine-accent alias */
 
-  /* Type — Montserrat Bold for headings, Montserrat for body (per brief) */
-  --display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Type — Bodoni Moda (display · Medium, italic for emphasis) + Jost (body/UI · Light/Regular) */
+  --display: 'Bodoni Moda', Georgia, 'Times New Roman', serif;
+  --body: 'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Layout */
   --radius-card: 14px;
@@ -47,23 +50,24 @@ body {
 }
 img, svg { max-width: 100%; display: block; }
 a { color: var(--cherry); text-decoration: none; transition: color 180ms ease; }
-a:hover, a:focus { color: var(--forest); }
+a:hover, a:focus { color: var(--cherry-deep); }
 button { font-family: inherit; cursor: pointer; }
 
-/* ---------- Typography ---------- */
+/* ---------- Typography ----------
+   Bodoni Moda (display) for h1/h2 headlines; Jost (body) for smaller h3/h4 UI labels. */
 h1, h2, h3, h4 {
   font-family: var(--display);
-  font-weight: 800;
-  letter-spacing: 0.005em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   line-height: 1.1;
   margin: 0 0 0.4em;
   color: var(--ink);
   text-transform: uppercase;
 }
-h1 { font-size: clamp(2.2rem, 5vw, 4.2rem); line-height: 1.05; }
-h2 { font-size: clamp(1.7rem, 3.6vw, 2.8rem); }
-h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 700; }
-h4 { font-size: 1.05rem; letter-spacing: 0.04em; font-weight: 700; }
+h1 { font-size: clamp(2.2rem, 5vw, 4.4rem); line-height: 1.04; letter-spacing: 0.02em; }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.8rem); letter-spacing: 0.02em; }
+h3 { font-family: var(--body); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 500; letter-spacing: 0.06em; }
+h4 { font-family: var(--body); font-size: 1.02rem; letter-spacing: 0.08em; font-weight: 500; }
 p { margin: 0 0 1em; }
 .eyebrow {
   font-family: var(--body);
@@ -75,7 +79,7 @@ p { margin: 0 0 1em; }
   margin: 0 0 1rem;
   display: inline-block;
 }
-.eyebrow.green { color: var(--forest); }
+.eyebrow.green { color: var(--cherry); }
 
 /* ---------- Layout ---------- */
 .container {
@@ -88,6 +92,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 .section-alt { background: var(--paper-alt); }
 .section-dark { background: var(--ink); color: var(--paper); }
 .section-dark h1, .section-dark h2, .section-dark h3 { color: var(--paper); }
+.section-dark .accent { color: var(--gold); }   /* accent-on-dark = champagne gold */
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -122,13 +127,17 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   background: var(--ink);
   color: var(--paper);
 }
+/* Gold is a fine-accent only — render the secondary button as a gold-framed,
+   ink-text button (black on gold has strong contrast; gold stays a "detail"). */
 .btn-green {
-  background: var(--forest);
-  border-color: var(--forest);
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--gold);
 }
 .btn-green:hover, .btn-green:focus {
-  background: var(--forest-deep);
-  border-color: var(--forest-deep);
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
 }
 
 /* ---------- Navigation ---------- */
@@ -183,11 +192,12 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   padding: 0;
 }
 .nav-links a {
-  font-weight: 600;
-  font-size: 0.88rem;
-  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-2);
+  white-space: nowrap;
 }
 .nav-links a:hover { color: var(--cherry); }
 .nav-cta { margin-left: 16px; }
@@ -306,7 +316,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   height: 52px;
   border-radius: 12px;
   background: var(--forest-soft);
-  color: var(--forest);
+  color: var(--cherry);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -360,7 +370,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   padding: 5px 12px;
   border-radius: var(--radius-pill);
   background: var(--forest-soft);
-  color: var(--forest-deep);
+  color: var(--cherry);
 }
 .detail-actions {
   display: flex;
@@ -435,7 +445,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   margin: 4px 0 2px;
 }
 .dash-stat-delta { font-size: 0.75rem; font-weight: 600; }
-.dash-stat-delta.up { color: var(--forest); }
+.dash-stat-delta.up { color: var(--forest-deep); }
 .dash-stat-delta.down { color: var(--cherry); }
 .dash-chart {
   display: flex;
@@ -669,15 +679,15 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   color: var(--paper);
 }
 .cta h2 { color: var(--paper); }
-.cta h2 .accent { color: var(--cherry); }
+.cta h2 .accent { color: var(--gold); }   /* accent-on-dark = champagne gold (wine is too dark on black) */
 .cta p {
   color: rgba(255, 255, 255, 0.8);
   max-width: 640px;
   margin: 0 auto 32px;
   font-size: 1.05rem;
 }
-.cta .btn { background: var(--cherry); border-color: var(--cherry); }
-.cta .btn:hover { background: var(--forest); border-color: var(--forest); }
+.cta .btn { background: var(--cherry); border-color: var(--cherry); color: var(--paper); }
+.cta .btn:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 
 /* ---------- FAQ (AEO) ---------- */
 .faq-list {
@@ -989,7 +999,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   padding: 4px 12px;
   border-radius: var(--radius-pill);
   background: var(--forest-soft);
-  color: var(--forest-deep);
+  color: var(--cherry);
 }
 
 /* ---------- Reveal animation ---------- */
@@ -1266,7 +1276,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   margin: 18px 0 8px;
 }
 .story-solution strong {
-  color: var(--forest);
+  color: var(--cherry);
   font-weight: 800;
   font-size: 1.08em;
 }
@@ -1436,31 +1446,33 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 }
 .tier-card .tier-list li { margin-bottom: 6px; }
 
-/* Tier-specific accents (all visible, Cherry strongest) */
+/* Tier accents — monochrome + single accent (wine) per Brand Book.
+   Wine signs every tier; gold is the fine detail reserved for the top tier (Beacon).
+   The featured tier (Glow) leads via lift + wine border + shadow, not a second colour. */
 .tier-bloom .num,
-.tier-bloom .tier-tag { color: var(--forest); }
+.tier-bloom .tier-tag { color: var(--cherry); }
 .tier-bloom .tier-tag { background: var(--forest-soft); }
-.tier-bloom { border-color: var(--forest-soft); }
+.tier-bloom { border-color: var(--paper-grey); }
 
 .tier-cherry .num,
 .tier-cherry .tier-tag--star { color: var(--cherry); }
 .tier-cherry .tier-tag--star { background: var(--cherry-soft); }
 .tier-cherry {
   border-color: var(--cherry);
-  box-shadow: 0 8px 32px rgba(121, 1, 26, 0.14);
-  transform: translateY(-8px);   /* lift Cherry slightly above its siblings */
+  box-shadow: 0 8px 32px rgba(84, 1, 1, 0.14);
+  transform: translateY(-8px);   /* lift the featured tier above its siblings */
 }
 .tier-cherry:hover { transform: translateY(-12px); }
 
 .tier-orchard .num,
-.tier-orchard .tier-tag { color: #B45309; }       /* amber accent — distinct from bloom + cherry */
-.tier-orchard .tier-tag { background: #FEF3C7; }
-.tier-orchard { border-color: #F4D49C; }
+.tier-orchard .tier-tag { color: var(--cherry); }
+.tier-orchard .tier-tag { background: var(--forest-soft); }
+.tier-orchard { border-color: var(--paper-grey); }
 
 .tier-vineyard .num,
-.tier-vineyard .tier-tag--forest { color: var(--forest); }
+.tier-vineyard .tier-tag--forest { color: var(--cherry); }
 .tier-vineyard .tier-tag--forest { background: var(--forest-soft); }
-.tier-vineyard { border-color: var(--forest); }
+.tier-vineyard { border-color: var(--gold); }   /* gold hairline = premium detail */
 
 /* ---------- Footer headings (h3 semantically, h4-sized visually for the existing footer design) ---------- */
 .footer-h {
@@ -1490,5 +1502,5 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
    TODO(rebrand): replace with the new Casa Lumee logo and refresh the
    colour palette (--cherry token + tier accents) once the logo lands. */
 .nav-logo .wordmark { font-weight: 700; white-space: nowrap; }
-.nav-logo .wordmark .accent,
-.footer .logo-line .accent { color: var(--cherry); }
+.nav-logo .wordmark .accent { color: var(--cherry); }   /* nav sits on ivory → wine */
+.footer .logo-line .accent { color: var(--gold); }      /* footer is dark → champagne gold */
