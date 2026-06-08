@@ -1,4 +1,4 @@
-# Cherry Content — Website
+# Casa Lumee — Website
 
 Creative growth studio website. Built as a static site for fast loading, strong SEO/AEO, and a simple "add a photo → commit → live in 60 seconds" workflow.
 
@@ -10,7 +10,7 @@ Creative growth studio website. Built as a static site for fast loading, strong 
 ## Folder structure
 
 ```
-cherry-content-site/
+casalumee-site/
 ├── index.html              # Home (hero, services, work, FAQ, contact)
 ├── about.html              # About page (founders, story, principles)
 ├── thank-you.html          # Form-submission landing page
@@ -66,7 +66,7 @@ Open `index.html` (or `about.html`), find the placeholder `<div class="img-slot"
 ### Step 3 — Push to GitHub
 
 ```bash
-cd "~/Documents/Claude/Claude-PBS Automation/cherry-content-site"
+cd "~/Documents/Claude/Claude-PBS Automation/casalumee-site"
 git add .
 git commit -m "Add: editorial portfolio shots"
 git push
@@ -81,32 +81,32 @@ Netlify watches the repo and auto-deploys in 30–60 seconds.
 ### A) Create the GitHub repo
 
 ```bash
-cd "~/Documents/Claude/Claude-PBS Automation/cherry-content-site"
+cd "~/Documents/Claude/Claude-PBS Automation/casalumee-site"
 
 # Initialise local repo
 git init
 git add .
-git commit -m "Initial: Cherry Content site scaffold"
+git commit -m "Initial: Casa Lumee site scaffold"
 
-# Create the repo on GitHub (via web: github.com/new) — call it "cherry-content-site"
+# Create the repo on GitHub (via web: github.com/new) — call it "casalumee-site"
 # Then connect and push:
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USER/cherry-content-site.git
+git remote add origin https://github.com/YOUR_GITHUB_USER/casalumee-site.git
 git push -u origin main
 ```
 
 ### B) Connect Netlify (free tier is fine)
 
 1. Go to **app.netlify.com** → **Add new site** → **Import from Git**.
-2. Choose **GitHub**, authorise, pick `cherry-content-site`.
+2. Choose **GitHub**, authorise, pick `casalumee-site`.
 3. Build settings:
    - **Build command:** *(leave empty)*
    - **Publish directory:** `.`
-4. Click **Deploy site**. You get a temporary URL like `cherry-content-xyz.netlify.app`.
+4. Click **Deploy site**. You get a temporary URL like `casalumee-xyz.netlify.app`.
 
 ### C) Connect your custom domain
 
-1. In Netlify: **Domain settings → Add custom domain** → `cherrycontent.com.au` (or whatever you've registered).
+1. In Netlify: **Domain settings → Add custom domain** → `casalumee.com.au` (or whatever you've registered).
 2. Netlify will give you DNS instructions — point your domain's nameservers (or A/CNAME records) to Netlify.
 3. Netlify auto-provisions a free SSL certificate.
 
@@ -117,8 +117,8 @@ The form is already wired in `index.html` (the `data-netlify="true"` attribute).
 1. Push at least one test submission through the live form so Netlify registers it.
 2. Netlify dashboard → **Forms** → click the `contact` form.
 3. **Settings & usage → Form notifications → Add notification → Email notification**.
-4. Recipient email: `sashank@cherrycontent.com.au` → **Save**.
-5. Click **Add notification** again → repeat for `valentina@cherrycontent.com.au`.
+4. Recipient email: `sashank@casalumee.com.au` → **Save**.
+5. Click **Add notification** again → repeat for `valentina@casalumee.com.au`.
 6. (Optional) Add a Slack/Outgoing webhook as a third notification for instant pings.
 
 Both addresses will now receive an email every time the form is submitted. You can also configure a custom email template and subject line from the same panel.
@@ -145,7 +145,7 @@ Both addresses will now receive an email every time the form is submitted. You c
 
 1. Verify the site in **Google Search Console** → submit `sitemap.xml`.
 2. Verify in **Bing Webmaster Tools** → submit `sitemap.xml`.
-3. Add a **Google Business Profile** (City: Melbourne) and link `cherrycontent.com.au`.
+3. Add a **Google Business Profile** (City: Melbourne) and link `casalumee.com.au`.
 4. Replace placeholder Instagram / LinkedIn URLs in the `Organization` schema in `index.html`.
 5. Add a real `og-image.jpg` (1200×630px) to `/assets/` — currently referenced but not yet present.
 6. Set up Google Analytics 4 (the GA4 service account from PBS can be reused).
@@ -158,8 +158,8 @@ A search across `index.html` and `about.html` will surface these placeholders:
 
 | Placeholder | Replace with |
 |---|---|
-| `cherrycontent.com.au` | Your real domain (currently the assumed one) |
-| `sashank@cherrycontent.com.au` / `valentina@cherrycontent.com.au` | ✓ Already set — update if needed |
+| `casalumee.com.au` | Your real domain (currently the assumed one) |
+| `sashank@casalumee.com.au` / `valentina@casalumee.com.au` | ✓ Already set — update if needed |
 | `+61` (in LocalBusiness schema) | Real phone number |
 | Instagram / LinkedIn URLs in JSON-LD | Real social URLs |
 | `Client 02`, `Client 03` in Work section | Real case studies as they come live |
@@ -173,7 +173,7 @@ A search across `index.html` and `about.html` will surface these placeholders:
 To preview before pushing:
 
 ```bash
-cd "~/Documents/Claude/Claude-PBS Automation/cherry-content-site"
+cd "~/Documents/Claude/Claude-PBS Automation/casalumee-site"
 python3 -m http.server 8080
 # then open http://localhost:8080
 ```
@@ -201,10 +201,10 @@ When the real logo files arrive, drop them into `/assets/` as:
 - `favicon.svg` and `favicon-32.png`
 - `apple-touch-icon.png` (180×180)
 
-Then update `<a class="nav-logo">` and the footer to `<img src="/assets/logo.svg" alt="Cherry Content">` if you want to swap the text mark for the real logo.
+Then update `<a class="nav-logo">` and the footer to `<img src="/assets/logo.svg" alt="Casa Lumee">` if you want to swap the text mark for the real logo.
 
 ---
 
 ## Support
 
-Maintained by Cherry Content. Edits via Claude / Cursor / VS Code — same Git workflow.
+Maintained by Casa Lumee. Edits via Claude / Cursor / VS Code — same Git workflow.

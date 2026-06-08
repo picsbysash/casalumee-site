@@ -33,4 +33,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /.netlify/
 
-Sitemap: https://cherrycontent.com.au/sitemap.xml
+Sitemap: https://casalumee.com.au/sitemap.xml

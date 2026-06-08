@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Cherry Content — main.js
+   Casa Lumee — main.js
    - Mobile nav toggle
    - Service card hover/click expand
    - FAQ accordion

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Cherry Content — Creative Growth Studio
+   Casa Lumee — Creative Growth Studio
    Intelligent Strategy. Global Impact.
    ========================================================================== */
 
@@ -1484,3 +1484,11 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 @media (max-width: 600px) {
   .cols-4 { grid-template-columns: 1fr; }
 }
+
+/* ---------- TEMP wordmark (Casa Lumee rebrand 2026-06-08) ----------
+   Old Cherry raster logo removed. This text wordmark is a placeholder.
+   TODO(rebrand): replace with the new Casa Lumee logo and refresh the
+   colour palette (--cherry token + tier accents) once the logo lands. */
+.nav-logo .wordmark { font-weight: 700; white-space: nowrap; }
+.nav-logo .wordmark .accent,
+.footer .logo-line .accent { color: var(--cherry); }
