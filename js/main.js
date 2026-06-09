@@ -154,6 +154,7 @@
     'website-build':  { en: 'Website build',                 es: 'Construcción de sitio web' },
     'seo-foundation': { en: 'SEO foundation (one-time)',     es: 'Base de SEO (única vez)' },
     'seo-growth':     { en: 'SEO growth (monthly)',          es: 'Crecimiento SEO (mensual)' },
+    'google-ads':     { en: 'Google Ads management',         es: 'Gestión de Google Ads' },
     'gmb':            { en: 'Google My Business ranking',    es: 'Ranking en Google My Business' },
     'cro':            { en: 'Conversion optimisation sprint',es: 'Sprint de optimización de conversión' },
     'ai-tracking':    { en: 'AI audience intelligence',      es: 'Inteligencia de audiencia con IA' },
