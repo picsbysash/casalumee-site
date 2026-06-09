@@ -1510,3 +1510,146 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 .nav-logo .wordmark { font-weight: 700; white-space: nowrap; }
 .nav-logo .wordmark .accent { color: var(--cherry); }   /* nav sits on ivory → wine */
 .footer .logo-line .accent { color: var(--gold); }      /* footer is dark → champagne gold */
+
+/* ---------- Stacked package ladder (each tier builds on the one below) ---------- */
+.pkg-ladder {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  overflow-x: auto;
+  padding: 40px 4px 18px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+.pkg-card {
+  flex: 0 0 252px;
+  background: var(--paper);
+  border: 1.5px solid var(--paper-grey);
+  border-radius: 16px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  scroll-snap-align: center;
+}
+.pkg-card.is-featured {
+  border-color: var(--cherry);
+  box-shadow: 0 12px 34px rgba(84, 1, 1, 0.12);
+}
+.pkg-tag {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--cherry);
+  color: var(--paper);
+  font-family: var(--body);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.pkg-name {
+  font-family: var(--display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.5rem;
+  color: var(--cherry);
+  line-height: 1.1;
+}
+.pkg-price {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  margin: 2px 0 16px;
+}
+.pkg-price small {
+  font-family: var(--body);
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.pkg-nest {
+  background: var(--forest-soft);
+  border: 1px dashed var(--gold);
+  border-radius: 12px;
+  padding: 11px 14px;
+  margin-bottom: 16px;
+}
+.pkg-nest .lbl {
+  font-family: var(--body);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7A5A1F;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.pkg-nest .pn {
+  font-family: var(--display);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.02rem;
+  letter-spacing: 0.03em;
+}
+.pkg-nest .pn small {
+  font-family: var(--body);
+  font-size: 0.74rem;
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.pkg-plus {
+  font-family: var(--body);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cherry);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.pkg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+.pkg-list li {
+  display: flex;
+  gap: 9px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  align-items: flex-start;
+  color: var(--ink-2);
+}
+.pkg-list li::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-top: 7px;
+  flex: 0 0 auto;
+}
+.pkg-cta {
+  margin-top: 18px;
+  text-align: center;
+  background: var(--cherry);
+  color: var(--paper);
+  font-family: var(--body);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 11px;
+  border-radius: var(--radius-pill);
+  transition: background 180ms ease, transform 180ms ease;
+}
+.pkg-cta:hover, .pkg-cta:focus { background: var(--cherry-deep); transform: translateY(-1px); }
+@media (max-width: 640px) {
+  .pkg-card { flex: 0 0 84%; }
+  .pkg-ladder { scroll-snap-type: x mandatory; }
+}
