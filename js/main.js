@@ -157,9 +157,8 @@
     'gmb':            { en: 'Google My Business ranking',    es: 'Ranking en Google My Business' },
     'cro':            { en: 'Conversion optimisation sprint',es: 'Sprint de optimización de conversión' },
     'ai-tracking':    { en: 'AI audience intelligence',      es: 'Inteligencia de audiencia con IA' },
-    'crm-portal':     { en: 'Branded client CRM portal',     es: 'Portal CRM con tu marca' },
+    'crm-portal':     { en: 'Branded CRM + AI assistant',    es: 'CRM + asistente IA con tu marca' },
     'brand-video':    { en: 'Brand video production',        es: 'Producción de video de marca' },
-    'ads-training':   { en: 'Paid Ads training (4 sessions)',es: 'Capacitación en ads (4 sesiones)' },
     'studio-shoot':   { en: 'Studio shoot',                  es: 'Sesión en estudio' },
   };
 
