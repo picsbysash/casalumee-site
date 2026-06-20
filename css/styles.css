@@ -28,11 +28,13 @@
   --body: 'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Layout */
-  --radius-card: 14px;
+  --radius-card: 8px;
   --radius-pill: 999px;
-  --shadow-soft: 0 2px 16px rgba(10, 10, 10, 0.06);
-  --shadow-card: 0 8px 30px rgba(10, 10, 10, 0.08);
-  --container: 1200px;
+  --shadow-soft: 0 1px 2px rgba(10, 10, 10, 0.04);
+  --shadow-card: 0 14px 50px rgba(10, 10, 10, 0.10);
+  --hairline: rgba(10, 10, 10, 0.10);
+  --hairline-gold: rgba(202, 156, 73, 0.45);
+  --container: 1160px;
 }
 
 /* ---------- Reset ---------- */
@@ -88,7 +90,7 @@ p { margin: 0 0 1em; }
   margin: 0 auto;
   padding: 0 24px;
 }
-section { padding: clamp(60px, 9vw, 120px) 0; }
+section { padding: clamp(88px, 12vw, 168px) 0; }
 .section-alt { background: var(--paper-alt); }
 .section-dark { background: var(--ink); color: var(--paper); }
 .section-dark h1, .section-dark h2, .section-dark h3 { color: var(--paper); }
@@ -145,19 +147,27 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
-  border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+  background: rgba(253, 248, 238, 0.78);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 240ms ease, background 240ms ease, box-shadow 240ms ease;
+}
+.nav.is-scrolled {
+  background: rgba(253, 248, 238, 0.92);
+  border-bottom-color: var(--hairline);
+  box-shadow: 0 1px 0 var(--hairline-gold);
 }
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
+  padding: 22px 24px;
   max-width: var(--container);
   margin: 0 auto;
+  transition: padding 240ms ease;
 }
+.nav.is-scrolled .nav-inner { padding: 13px 24px; }
 .nav-logo {
   display: inline-flex;
   align-items: center;
@@ -170,11 +180,10 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   line-height: 1;
 }
 .nav-logo img {
-  height: 52px;
-  width: 52px;
+  height: 34px;
+  width: auto;
   display: block;
   object-fit: contain;
-  border-radius: 6px;
 }
 .nav-logo .dot {
   width: 12px;
@@ -213,23 +222,33 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding: clamp(80px, 14vw, 160px) 0 clamp(60px, 10vw, 120px);
-  background:
-    radial-gradient(ellipse at top left, var(--cherry-soft) 0%, transparent 55%),
-    radial-gradient(ellipse at bottom right, var(--forest-soft) 0%, transparent 60%),
-    var(--paper);
+  padding: clamp(120px, 17vw, 210px) 0 clamp(96px, 12vw, 150px);
+  background: var(--paper);
+  border-bottom: 1px solid var(--hairline-gold);
   overflow: hidden;
 }
 .hero-inner {
-  max-width: 960px;
+  max-width: 940px;
   margin: 0 auto;
   text-align: center;
   position: relative;
   z-index: 2;
 }
+.hero .eyebrow { color: var(--ink-3); }
+.hero .eyebrow::before,
+.hero .eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin: 0 12px 3px;
+}
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  line-height: 0.98;
+  font-size: clamp(3rem, 8vw, 6.2rem);
+  line-height: 1.0;
+  letter-spacing: 0.01em;
 }
 .hero h1 .accent { color: var(--cherry); }
 .hero .lead {
@@ -280,9 +299,9 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 }
 .service-card {
   background: var(--paper);
-  border: 1.5px solid rgba(10, 10, 10, 0.08);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-card);
-  padding: 36px 32px;
+  padding: 40px 36px;
   cursor: pointer;
   position: relative;
   transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
@@ -294,8 +313,9 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   box-shadow: var(--shadow-card);
 }
 .service-card.featured {
-  border: 2px solid var(--cherry);
-  background: linear-gradient(135deg, var(--paper) 0%, var(--cherry-soft) 100%);
+  border: 1px solid var(--cherry);
+  background: var(--paper);
+  box-shadow: inset 0 2px 0 var(--cherry);
 }
 .service-card.featured::before {
   content: 'NEW';
@@ -314,16 +334,18 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 .service-icon {
   width: 52px;
   height: 52px;
-  border-radius: 12px;
-  background: var(--forest-soft);
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--hairline-gold);
   color: var(--cherry);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 .service-card.featured .service-icon {
   background: var(--cherry);
+  border-color: var(--cherry);
   color: var(--paper);
 }
 .service-card h3 {
@@ -381,16 +403,16 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 
 /* Image slot placeholder */
 .img-slot {
-  background: linear-gradient(135deg, var(--paper-alt) 0%, var(--paper-grey) 100%);
-  border: 1.5px dashed var(--ink-4);
-  border-radius: 10px;
+  background: var(--paper-alt);
+  border: 1px solid var(--hairline-gold);
+  border-radius: var(--radius-card);
   aspect-ratio: 4 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink-3);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  color: var(--ink-4);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
@@ -1653,3 +1675,42 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
   .pkg-card { flex: 0 0 84%; }
   .pkg-ladder { scroll-snap-type: x mandatory; }
 }
+
+/* ---------- Selected-work photo gallery (Our Work) ---------- */
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 44px 0 0;
+}
+.work-shot {
+  margin: 0;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--paper-alt);
+}
+.work-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 700ms cubic-bezier(.2,.6,.2,1);
+}
+.work-shot:hover img { transform: scale(1.045); }
+.work-sub {
+  margin: 56px 0 22px;
+  font-family: var(--body);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+@media (max-width: 760px) {
+  .work-gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+}
+
+/* Charli Couture logo is a stacked (square-ish) mark — give it more height than
+   the horizontal wordmark logos so it reads on the dark tile. */
+.client-logo--dark img[alt="Charli Couture logo"] { max-height: 52px; }

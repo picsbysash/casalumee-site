@@ -15,6 +15,14 @@
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  /* ---- Condense nav on scroll (serious/luxury polish) ---- */
+  const navEl = document.querySelector('.nav');
+  if (navEl) {
+    const onScroll = () => navEl.classList.toggle('is-scrolled', window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
   /* ---- Mobile nav toggle ---- */
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navLinks');
@@ -24,8 +32,11 @@
       toggle.setAttribute('aria-expanded', String(open));
     });
     // close when a link is clicked (mobile)
+    // use closest('a') — the links wrap inner <span> lang labels, so a tap's
+    // e.target is the span, not the <a>; matches('a') missed it and the menu
+    // stayed open after selecting.
     links.addEventListener('click', (e) => {
-      if (e.target.matches('a')) {
+      if (e.target.closest('a')) {
         links.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
       }
